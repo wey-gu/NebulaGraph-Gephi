@@ -1,0 +1,653 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-09-01">
+    <creator>NetworkX 3.0</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="edge">
+      <attribute id="5" title="post_time" type="long" />
+      <attribute id="6" title="edge_type" type="string" />
+      <attribute id="7" title="networkx_key" type="long" />
+      <attribute id="8" title="degree" type="long" />
+      <attribute id="9" title="start_year" type="long" />
+      <attribute id="10" title="end_year" type="long" />
+    </attributes>
+    <attributes mode="static" class="node">
+      <attribute id="0" title="name" type="string" />
+      <attribute id="1" title="age" type="long" />
+      <attribute id="2" title="title" type="string" />
+      <attribute id="3" title="geo_point" type="string" />
+      <attribute id="4" title="address" type="string" />
+    </attributes>
+    <nodes>
+      <node id="player136" label="player136">
+        <attvalues>
+          <attvalue for="0" value="Steve Nash" />
+          <attvalue for="1" value="45" />
+        </attvalues>
+      </node>
+      <node id="post8" label="post8">
+        <attvalues>
+          <attvalue for="2" value="Frank, the cat" />
+        </attvalues>
+      </node>
+      <node id="player117" label="player117">
+        <attvalues>
+          <attvalue for="1" value="31" />
+          <attvalue for="0" value="Stephen Curry" />
+        </attvalues>
+      </node>
+      <node id="player137" label="player137">
+        <attvalues>
+          <attvalue for="1" value="40" />
+          <attvalue for="0" value="Dirk Nowitzki" />
+        </attvalues>
+      </node>
+      <node id="player147" label="player147">
+        <attvalues>
+          <attvalue for="1" value="36" />
+          <attvalue for="0" value="Amar'e Stoudemire" />
+        </attvalues>
+      </node>
+      <node id="player148" label="player148">
+        <attvalues>
+          <attvalue for="1" value="45" />
+          <attvalue for="0" value="Jason Kidd" />
+        </attvalues>
+      </node>
+      <node id="team210" label="team210">
+        <attvalues>
+          <attvalue for="0" value="Lakers" />
+        </attvalues>
+      </node>
+      <node id="team213" label="team213">
+        <attvalues>
+          <attvalue for="0" value="Mavericks" />
+        </attvalues>
+      </node>
+      <node id="team214" label="team214">
+        <attvalues>
+          <attvalue for="0" value="Suns" />
+        </attvalues>
+      </node>
+      <node id="player130" label="player130">
+        <attvalues>
+          <attvalue for="0" value="Joel Embiid" />
+          <attvalue for="1" value="25" />
+        </attvalues>
+      </node>
+      <node id="post1" label="post1">
+        <attvalues>
+          <attvalue for="2" value="a beautify flower" />
+        </attvalues>
+      </node>
+      <node id="player149" label="player149">
+        <attvalues>
+          <attvalue for="1" value="22" />
+          <attvalue for="0" value="Ben Simmons" />
+        </attvalues>
+      </node>
+      <node id="team219" label="team219">
+        <attvalues>
+          <attvalue for="0" value="76ers" />
+        </attvalues>
+      </node>
+      <node id="player121" label="player121">
+        <attvalues>
+          <attvalue for="0" value="Chris Paul" />
+          <attvalue for="1" value="33" />
+        </attvalues>
+      </node>
+      <node id="player116" label="player116">
+        <attvalues>
+          <attvalue for="1" value="34" />
+          <attvalue for="0" value="LeBron James" />
+        </attvalues>
+      </node>
+      <node id="player128" label="player128">
+        <attvalues>
+          <attvalue for="1" value="34" />
+          <attvalue for="0" value="Carmelo Anthony" />
+        </attvalues>
+      </node>
+      <node id="player129" label="player129">
+        <attvalues>
+          <attvalue for="1" value="37" />
+          <attvalue for="0" value="Dwyane Wade" />
+        </attvalues>
+      </node>
+      <node id="team202" label="team202">
+        <attvalues>
+          <attvalue for="0" value="Rockets" />
+        </attvalues>
+      </node>
+      <node id="team207" label="team207">
+        <attvalues>
+          <attvalue for="0" value="Clippers" />
+        </attvalues>
+      </node>
+      <node id="team215" label="team215">
+        <attvalues>
+          <attvalue for="0" value="Hornets" />
+        </attvalues>
+      </node>
+      <node id="player113" label="player113">
+        <attvalues>
+          <attvalue for="0" value="Dejounte Murray" />
+          <attvalue for="1" value="29" />
+        </attvalues>
+      </node>
+      <node id="post11" label="post11">
+        <attvalues>
+          <attvalue for="2" value="Let's have a party!" />
+        </attvalues>
+      </node>
+      <node id="post3" label="post3">
+        <attvalues>
+          <attvalue for="2" value="I can swim" />
+        </attvalues>
+      </node>
+      <node id="player100" label="player100">
+        <attvalues>
+          <attvalue for="1" value="42" />
+          <attvalue for="0" value="Tim Duncan" />
+        </attvalues>
+      </node>
+      <node id="player101" label="player101">
+        <attvalues>
+          <attvalue for="1" value="36" />
+          <attvalue for="0" value="Tony Parker" />
+        </attvalues>
+      </node>
+      <node id="player104" label="player104">
+        <attvalues>
+          <attvalue for="1" value="32" />
+          <attvalue for="0" value="Marco Belinelli" />
+        </attvalues>
+      </node>
+      <node id="player105" label="player105">
+        <attvalues>
+          <attvalue for="1" value="31" />
+          <attvalue for="0" value="Danny Green" />
+        </attvalues>
+      </node>
+      <node id="player106" label="player106">
+        <attvalues>
+          <attvalue for="1" value="25" />
+          <attvalue for="0" value="Kyle Anderson" />
+        </attvalues>
+      </node>
+      <node id="player118" label="player118">
+        <attvalues>
+          <attvalue for="1" value="30" />
+          <attvalue for="0" value="Russell Westbrook" />
+        </attvalues>
+      </node>
+      <node id="player119" label="player119">
+        <attvalues>
+          <attvalue for="1" value="30" />
+          <attvalue for="0" value="Kevin Durant" />
+        </attvalues>
+      </node>
+      <node id="player120" label="player120">
+        <attvalues>
+          <attvalue for="1" value="29" />
+          <attvalue for="0" value="James Harden" />
+        </attvalues>
+      </node>
+      <node id="player125" label="player125">
+        <attvalues>
+          <attvalue for="1" value="41" />
+          <attvalue for="0" value="Manu Ginobili" />
+        </attvalues>
+      </node>
+      <node id="addr_13" label="addr_13">
+        <attvalues>
+          <attvalue for="3" value="POINT(Point(&#10;    coord=Coordinate(&#10;        x=120.12,&#10;        y=30.16)))" />
+          <attvalue for="4" value="1 Southport Street Apt. 098 Westport  KY 85907" />
+        </attvalues>
+      </node>
+      <node id="team204" label="team204">
+        <attvalues>
+          <attvalue for="0" value="Spurs" />
+        </attvalues>
+      </node>
+      <node id="player103" label="player103">
+        <attvalues>
+          <attvalue for="0" value="Rudy Gay" />
+          <attvalue for="1" value="32" />
+        </attvalues>
+      </node>
+      <node id="player102" label="player102">
+        <attvalues>
+          <attvalue for="1" value="33" />
+          <attvalue for="0" value="LaMarcus Aldridge" />
+        </attvalues>
+      </node>
+      <node id="post4" label="post4">
+        <attvalues>
+          <attvalue for="2" value="I love you, Dad" />
+        </attvalues>
+      </node>
+      <node id="addr_3" label="addr_3">
+        <attvalues>
+          <attvalue for="3" value="POINT(Point(&#10;    coord=Coordinate(&#10;        x=5.0,&#10;        y=6.0)))" />
+          <attvalue for="4" value="5 Joanna Key Suite 704 Frankshire  OK 03035" />
+        </attvalues>
+      </node>
+      <node id="team208" label="team208">
+        <attvalues>
+          <attvalue for="0" value="Kings" />
+        </attvalues>
+      </node>
+      <node id="team212" label="team212">
+        <attvalues>
+          <attvalue for="0" value="Grizzlies" />
+        </attvalues>
+      </node>
+      <node id="team218" label="team218">
+        <attvalues>
+          <attvalue for="0" value="Raptors" />
+        </attvalues>
+      </node>
+      <node id="addr_0" label="addr_0">
+        <attvalues>
+          <attvalue for="4" value="Brittany Forge Apt. 718 East Eric  WV 97881" />
+          <attvalue for="3" value="POINT(Point(&#10;    coord=Coordinate(&#10;        x=1.0,&#10;        y=2.0)))" />
+        </attvalues>
+      </node>
+      <node id="WV" label="WV">
+        <attvalues>
+          <attvalue for="3" value="POINT(Point(&#10;    coord=Coordinate(&#10;        x=1.0,&#10;        y=2.5)))" />
+          <attvalue for="0" value="West Virginia" />
+        </attvalues>
+      </node>
+      <node id="addr_5" label="addr_5">
+        <attvalues>
+          <attvalue for="4" value="2 Klein Mission New Annetteton  HI 05775" />
+          <attvalue for="3" value="POINT(Point(&#10;    coord=Coordinate(&#10;        x=9.0,&#10;        y=10.0)))" />
+        </attvalues>
+      </node>
+      <node id="HI" label="HI">
+        <attvalues>
+          <attvalue for="3" value="POINT(Point(&#10;    coord=Coordinate(&#10;        x=9.0,&#10;        y=10.1)))" />
+          <attvalue for="0" value="Hawaii" />
+        </attvalues>
+      </node>
+      <node id="team201" label="team201">
+        <attvalues>
+          <attvalue for="0" value="Nuggets" />
+        </attvalues>
+      </node>
+      <node id="team205" label="team205">
+        <attvalues>
+          <attvalue for="0" value="Thunders" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="player136" target="post8" id="0">
+        <attvalues>
+          <attvalue for="5" value="1546561806" />
+          <attvalue for="6" value="commented_at" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player136" target="player117" id="1">
+        <attvalues>
+          <attvalue for="8" value="90" />
+          <attvalue for="6" value="follow" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player136" target="player137" id="2">
+        <attvalues>
+          <attvalue for="8" value="88" />
+          <attvalue for="6" value="follow" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player136" target="player147" id="3">
+        <attvalues>
+          <attvalue for="8" value="90" />
+          <attvalue for="6" value="follow" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player136" target="player148" id="4">
+        <attvalues>
+          <attvalue for="8" value="85" />
+          <attvalue for="6" value="follow" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player136" target="team210" id="5">
+        <attvalues>
+          <attvalue for="9" value="2012" />
+          <attvalue for="10" value="2015" />
+          <attvalue for="6" value="serve" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player136" target="team213" id="6">
+        <attvalues>
+          <attvalue for="9" value="1998" />
+          <attvalue for="10" value="2004" />
+          <attvalue for="6" value="serve" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player136" target="team214" id="7">
+        <attvalues>
+          <attvalue for="9" value="1996" />
+          <attvalue for="10" value="1998" />
+          <attvalue for="6" value="serve" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player136" target="team214" id="8">
+        <attvalues>
+          <attvalue for="9" value="2004" />
+          <attvalue for="10" value="2012" />
+          <attvalue for="6" value="serve" />
+          <attvalue for="7" value="1" />
+        </attvalues>
+      </edge>
+      <edge source="player130" target="post1" id="9">
+        <attvalues>
+          <attvalue for="5" value="1546389006" />
+          <attvalue for="6" value="commented_at" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player130" target="player149" id="10">
+        <attvalues>
+          <attvalue for="8" value="80" />
+          <attvalue for="6" value="follow" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player130" target="team219" id="11">
+        <attvalues>
+          <attvalue for="9" value="2014" />
+          <attvalue for="10" value="2019" />
+          <attvalue for="6" value="serve" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player121" target="player116" id="12">
+        <attvalues>
+          <attvalue for="8" value="90" />
+          <attvalue for="6" value="follow" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player121" target="player128" id="13">
+        <attvalues>
+          <attvalue for="8" value="90" />
+          <attvalue for="6" value="follow" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player121" target="player129" id="14">
+        <attvalues>
+          <attvalue for="8" value="90" />
+          <attvalue for="6" value="follow" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player121" target="team202" id="15">
+        <attvalues>
+          <attvalue for="9" value="2017" />
+          <attvalue for="10" value="2021" />
+          <attvalue for="6" value="serve" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player121" target="team207" id="16">
+        <attvalues>
+          <attvalue for="9" value="2011" />
+          <attvalue for="10" value="2017" />
+          <attvalue for="6" value="serve" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player121" target="team215" id="17">
+        <attvalues>
+          <attvalue for="9" value="2005" />
+          <attvalue for="10" value="2011" />
+          <attvalue for="6" value="serve" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player128" target="player116" id="18">
+        <attvalues>
+          <attvalue for="8" value="90" />
+          <attvalue for="6" value="follow" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player128" target="player121" id="19">
+        <attvalues>
+          <attvalue for="8" value="90" />
+          <attvalue for="6" value="follow" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player128" target="player129" id="20">
+        <attvalues>
+          <attvalue for="8" value="90" />
+          <attvalue for="6" value="follow" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player128" target="team201" id="21">
+        <attvalues>
+          <attvalue for="9" value="2003" />
+          <attvalue for="10" value="2011" />
+          <attvalue for="6" value="serve" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player128" target="team202" id="22">
+        <attvalues>
+          <attvalue for="9" value="2018" />
+          <attvalue for="10" value="2019" />
+          <attvalue for="6" value="serve" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player128" target="team205" id="23">
+        <attvalues>
+          <attvalue for="9" value="2017" />
+          <attvalue for="10" value="2018" />
+          <attvalue for="6" value="serve" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player113" target="post11" id="24">
+        <attvalues>
+          <attvalue for="5" value="1647338430" />
+          <attvalue for="6" value="commented_at" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player113" target="post3" id="25">
+        <attvalues>
+          <attvalue for="5" value="1573641846" />
+          <attvalue for="6" value="commented_at" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player113" target="player100" id="26">
+        <attvalues>
+          <attvalue for="8" value="99" />
+          <attvalue for="6" value="follow" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player113" target="player101" id="27">
+        <attvalues>
+          <attvalue for="8" value="99" />
+          <attvalue for="6" value="follow" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player113" target="player104" id="28">
+        <attvalues>
+          <attvalue for="8" value="99" />
+          <attvalue for="6" value="follow" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player113" target="player105" id="29">
+        <attvalues>
+          <attvalue for="8" value="99" />
+          <attvalue for="6" value="follow" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player113" target="player106" id="30">
+        <attvalues>
+          <attvalue for="8" value="99" />
+          <attvalue for="6" value="follow" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player113" target="player116" id="31">
+        <attvalues>
+          <attvalue for="8" value="99" />
+          <attvalue for="6" value="follow" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player113" target="player118" id="32">
+        <attvalues>
+          <attvalue for="8" value="99" />
+          <attvalue for="6" value="follow" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player113" target="player119" id="33">
+        <attvalues>
+          <attvalue for="8" value="99" />
+          <attvalue for="6" value="follow" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player113" target="player120" id="34">
+        <attvalues>
+          <attvalue for="8" value="99" />
+          <attvalue for="6" value="follow" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player113" target="player121" id="35">
+        <attvalues>
+          <attvalue for="8" value="99" />
+          <attvalue for="6" value="follow" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player113" target="player125" id="36">
+        <attvalues>
+          <attvalue for="8" value="99" />
+          <attvalue for="6" value="follow" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player113" target="addr_13" id="37">
+        <attvalues>
+          <attvalue for="6" value="lived_in" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player113" target="team204" id="38">
+        <attvalues>
+          <attvalue for="9" value="2016" />
+          <attvalue for="10" value="2019" />
+          <attvalue for="6" value="serve" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player103" target="post1" id="39">
+        <attvalues>
+          <attvalue for="5" value="1506209406" />
+          <attvalue for="6" value="commented_at" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player103" target="post3" id="40">
+        <attvalues>
+          <attvalue for="5" value="1573814706" />
+          <attvalue for="6" value="commented_at" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player103" target="player102" id="41">
+        <attvalues>
+          <attvalue for="8" value="70" />
+          <attvalue for="6" value="follow" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player103" target="post4" id="42">
+        <attvalues>
+          <attvalue for="5" value="1417466711" />
+          <attvalue for="6" value="created_post" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player103" target="addr_3" id="43">
+        <attvalues>
+          <attvalue for="6" value="lived_in" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player103" target="team204" id="44">
+        <attvalues>
+          <attvalue for="9" value="2017" />
+          <attvalue for="10" value="2019" />
+          <attvalue for="6" value="serve" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player103" target="team208" id="45">
+        <attvalues>
+          <attvalue for="9" value="2013" />
+          <attvalue for="10" value="2017" />
+          <attvalue for="6" value="serve" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player103" target="team212" id="46">
+        <attvalues>
+          <attvalue for="9" value="2006" />
+          <attvalue for="10" value="2013" />
+          <attvalue for="6" value="serve" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="player103" target="team218" id="47">
+        <attvalues>
+          <attvalue for="9" value="2013" />
+          <attvalue for="10" value="2013" />
+          <attvalue for="6" value="serve" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="addr_0" target="WV" id="48">
+        <attvalues>
+          <attvalue for="6" value="belong_to" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="addr_5" target="HI" id="49">
+        <attvalues>
+          <attvalue for="6" value="belong_to" />
+          <attvalue for="7" value="0" />
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
