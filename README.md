@@ -29,3 +29,8 @@ python3 -m pip install -r requirements.txt
 streamlit run nebulagraph-gephi-exchange.py
 ```
 
+> Optionally, with docker
+
+```
+docker-compose up -d
+```

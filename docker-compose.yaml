@@ -1,0 +1,6 @@
+services:
+  nebulagraph-gephi:
+    container_name: nebulagraph-gephi
+    image: nebulagraph/nebulagraph-gephi:latest
+    ports:
+      - "8501:8501"

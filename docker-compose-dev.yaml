@@ -1,0 +1,8 @@
+services:
+  nebulagraph-gephi:
+    container_name: nebulagraph-gephi
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
