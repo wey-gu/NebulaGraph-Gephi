@@ -82,10 +82,6 @@ def render_pd_item(g, g_nx, item):
             k: str(v.cast()) if isinstance(v.cast(), GeographyWrapper) else v.cast()
             for k, v in props_raw.items()
         }
-        # print types of all props
-        for k, v in props.items():
-            print(f"{k}: {type(v)}")
-        print(f"props: {props}")
 
         g.add_node(node_id, label=node_id, title=str(props), color=get_color(node_id))
 
@@ -185,7 +181,7 @@ def query_nebulagraph(
             if space_name:
                 session.execute("USE {}".format(space_name))
             result = session.execute(query)
-            print(result)
+            print(f"[debug]: {result}")
         connection_pool.close()
     except Exception as e:
         st.warning(e)
@@ -265,9 +261,9 @@ with st.sidebar:
     if "g" not in st.session_state:
         g = persist("g")
         st.session_state.g = None
-    if "g_nx" not in st.session_state:
-        g_nx = persist("g_nx")
-        st.session_state.g_nx = None
+    if "result_df" not in st.session_state:
+        result_df = persist("result_df")
+        st.session_state.result_df = None
 
     st.sidebar.markdown("---")
 
@@ -304,9 +300,8 @@ with tab_query:
 
     with st.expander("", expanded=True):
         # to column, query field and query button
-        input_field, buttons = st.columns([8, 1])
+        input_field, buttons = st.columns([8, 1.3])
         with input_field:
-
             query = st.text_area(
                 "Enter your query",
                 height=190,
@@ -333,9 +328,11 @@ with tab_query:
             )
 
             if st.button(
-                "　Execute", type="secondary", disabled=not bool(st.session_state.space_name)
+                "➡　　Execute",
+                use_container_width=True,
+                type="secondary",
+                disabled=not bool(st.session_state.space_name),
             ):
-                
                 result = query_nebulagraph(
                     query,
                     st.session_state.space_name,
@@ -350,6 +347,7 @@ with tab_query:
                     st.stop()
 
                 result_df = result_to_df(result)
+                st.session_state.result_df = result_df
 
                 # create pyvis graph
                 g, g_nx = create_graph(result_df)
@@ -357,8 +355,10 @@ with tab_query:
                 get_gephi_graph(g_nx)
                 with open("nebulagraph_export.gexf", "rb") as f:
                     st.download_button(
-                        label="⬇️　.GEXF",
+                        label="⬇　.GEXF File",
+                        use_container_width=True,
                         data=f.read(),
+                        type="primary",
                         file_name="nebulagraph_export.gexf",
                         mime="application/xml",
                     )
@@ -372,6 +372,7 @@ with tab_query:
 
         # check all value to see whether there is a path or a GeographyWrapper
         path_or_geo = False
+        result_df = st.session_state.result_df
         for _, row in result_df.iterrows():
             for item in row:
                 if isinstance(item, PathWrapper) or isinstance(item, GeographyWrapper):
