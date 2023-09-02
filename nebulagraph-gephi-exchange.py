@@ -3,6 +3,7 @@ import sys
 
 import streamlit as st
 import streamlit.components.v1 as components
+from streamlit_ace import st_ace
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stdin.reconfigure(encoding="utf-8")
@@ -136,8 +137,13 @@ def create_graph(result_df):
         notebook=True,
         directed=True,
         cdn_resources="in_line",
-        height="500px",
+        height="600px",
         width="100%",
+        bgcolor="#262730",
+        font_color="#F8F9FB",
+        neighborhood_highlight=True,
+        # select_menu=True,
+        filter_menu=True,
     )
     g_nx = nx.MultiDiGraph()
     for _, row in result_df.iterrows():
@@ -244,13 +250,13 @@ with st.sidebar:
         f"<h4>NebulaGraph Gephi</h4></div>",
         unsafe_allow_html=True,
     )
-    # st.sidebar.markdown("---")
+    st.sidebar.markdown("---")
 
-    graphd_host = st.sidebar.text_input("", value="graphd", key="graphd_host")
-    graphd_port = st.sidebar.number_input("", value=9669, key="graphd_port")
-    user = st.sidebar.text_input("", value="root", key="user")
+    graphd_host = st.sidebar.text_input("graphd host", value="graphd", key="graphd_host", label_visibility="collapsed")
+    graphd_port = st.sidebar.number_input("graphd port", value=9669, key="graphd_port", label_visibility="collapsed")
+    user = st.sidebar.text_input("user", value="root", key="user", label_visibility="collapsed")
     password = st.sidebar.text_input(
-        "", value="nebula", type="password", key="password"
+        "passwore", value="nebula", type="password", key="password", label_visibility="collapsed"
     )
     if "space_name_list" not in st.session_state:
         space_name_list = persist("space_name_list")
@@ -298,18 +304,14 @@ with tab_query:
         "for more analysis and visualization."
     )
 
-    with st.expander("", expanded=True):
+    with st.expander("▷ Console", expanded=True):
         # to column, query field and query button
         input_field, buttons = st.columns([8, 1.3])
         with input_field:
-            query = st.text_area(
-                "Enter your query",
-                height=190,
+            query = st_ace(
                 value="MATCH p=()-[]->() \nRETURN p LIMIT 50;",
-                key="query",
-                label_visibility="collapsed",
-                help="Query SUBGRAPH, PATH, NODES AND EDGES to enable visualization.",
-                placeholder="""# Query SUBGRAPH, PATH, NODES AND EDGES to enable visualization.
+                height=170,
+                annotations="""# Query SUBGRAPH, PATH, NODES AND EDGES to enable visualization.
             MATCH p=(v)-[]->()
             WHERE id(v) == "player100"
             RETURN p LIMIT 50;
@@ -319,7 +321,29 @@ with tab_query:
             # or
             FIND PATH FROM "player102" TO "team204" OVER * YIELD path AS p;
             """,
+                language="pgsql",
+                theme="solarized_dark",
+                auto_update=True,
             )
+            # query = st.text_area(
+            #     "Query Input Field",
+            #     height=190,
+            #     value="MATCH p=()-[]->() \nRETURN p LIMIT 50;",
+            #     key="query",
+            #     label_visibility="collapsed",
+            #     help="Query SUBGRAPH, PATH, NODES AND EDGES to enable visualization.",
+            #     placeholder="""# Query SUBGRAPH, PATH, NODES AND EDGES to enable visualization.
+            # MATCH p=(v)-[]->()
+            # WHERE id(v) == "player100"
+            # RETURN p LIMIT 50;
+            # # or
+            # GET SUBGRAPH WITH PROP 2 STEPS FROM "player100"
+            # YIELD VERTICES AS NODES, EDGES AS RELATIONSHIPS;
+            # # or
+            # FIND PATH FROM "player102" TO "team204" OVER * YIELD path AS p;
+            # """,
+            # )
+
         with buttons:
             space_name = st.selectbox(
                 "",
@@ -354,32 +378,33 @@ with tab_query:
                 st.session_state.g = g
                 get_gephi_graph(g_nx)
                 with open("nebulagraph_export.gexf", "rb") as f:
-                    st.download_button(
+                    if st.download_button(
                         label="⬇　.GEXF File",
                         use_container_width=True,
                         data=f.read(),
                         type="primary",
                         file_name="nebulagraph_export.gexf",
                         mime="application/xml",
-                    )
+                    ):
+                        st.toast('Files cannot be downloaded in Docker Extension, visit from browser instead', icon='💡')
 
     if st.session_state.g is not None:
         g = st.session_state.g
         # render with random file name
         graph_html = g.generate_html()
 
-        components.html(graph_html, height=500, scrolling=True)
+        components.html(graph_html, height=720, scrolling=False)
 
         # check all value to see whether there is a path or a GeographyWrapper
-        path_or_geo = False
+        raw_data = False
         result_df = st.session_state.result_df
         for _, row in result_df.iterrows():
             for item in row:
-                if isinstance(item, PathWrapper) or isinstance(item, GeographyWrapper):
-                    path_or_geo = True
+                if type(item) in [PathWrapper, GeographyWrapper, Node, Relationship, list]:
+                    raw_data = True
                     break
 
-        if not path_or_geo:
+        if not raw_data:
             try:
                 st.dataframe(result_df)
             except Exception as e:
@@ -387,9 +412,11 @@ with tab_query:
         else:
             # format result_df to string values
             result_df_str = result_df.applymap(lambda x: str(x))
+            st.markdown("---")
             st.dataframe(
                 result_df_str,
-                width=1920,
+                use_container_width=True,
+                hide_index=True,
             )
     # TODO:
     # - [ ] add a button to download the graph as html file
@@ -401,6 +428,6 @@ with tab_gephi:
 
     components.iframe(
         src="https://gephi.org/gephi-lite/",
-        height=1280,
+        height=800,
         scrolling=True,
     )
