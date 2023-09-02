@@ -1,5 +1,7 @@
 # NebulaGrahp Gephi Exchange
 
+Gephi is an Awesome Graph Algo and Vis tool! If you would like to visualize your data on NebulaGraph with it, this is the way to go.
+
 https://github.com/siwei-io/talks/assets/1651790/c036a229-c71e-4344-93d4-720657f2ba90
 
 Features:
@@ -14,7 +16,7 @@ TODO
 - [ ] Download as HTML
 - [ ] Download the result as a CSV
 
-## How to
+## 🚀 How to
 
 > Installation
 
@@ -29,8 +31,18 @@ python3 -m pip install -r requirements.txt
 streamlit run nebulagraph-gephi-exchange.py
 ```
 
-> Optionally, with docker
+> Optionally, with the docker
 
 ```
 docker-compose up -d
 ```
+
+> Or, if you are using the NebulaGraph Docker extension, it's already been included since 0.4.12
+
+Go to [here](https://hub.docker.com/extensions/weygu/nebulagraph-dd-ext) and one click to try it!
+
+## ♥️ Thanks to
+
+- [Gephi/Gephi-Lite](Gephi/Gephi-Lite), the amazing open-source project makes Graph Analytics in the Browser so very easy and elegant!
+- [Streamlit](https://streamlit.io/), the best lib& community makes py-script boy like me to create decent data & GUI-ish things.
+- [PyVis](https://github.com/WestHealth/pyvis), the best lib makes graph rendering so very smoothly in pure Python.
