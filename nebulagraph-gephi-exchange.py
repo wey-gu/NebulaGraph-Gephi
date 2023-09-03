@@ -1,5 +1,6 @@
 import sys
 
+from typing import List, Dict
 
 import streamlit as st
 import streamlit.components.v1 as components
@@ -25,7 +26,7 @@ def persist(key: str) -> str:
     return key
 
 
-def load_widget_state():
+def load_widget_state() -> None:
     """Load persistent widget state."""
     if _PERSIST_STATE_KEY in _state:
         _state.update(
@@ -43,10 +44,9 @@ def load_widget_state():
 from nebula3.data.DataObject import Node, PathWrapper, Relationship, GeographyWrapper
 
 
-def result_to_df(result):
+def result_to_df(result) -> Dict[str, list]:
     if result is None:
         return None
-    from typing import Dict
 
     import pandas as pd
 
@@ -74,7 +74,14 @@ COLORS = [
 ]
 
 
-def get_color(input_str):
+def truncate(string: str, length: int = 10) -> str:
+    if len(string) > length:
+        return string[:length] + ".."
+    else:
+        return string
+
+
+def get_color(input_str: str) -> str:
     hash_val = 0
     for char in input_str:
         hash_val = (hash_val * 31 + ord(char)) & 0xFFFFFFFF
@@ -138,7 +145,16 @@ def render_pd_item(g, g_nx, item):
                 title=str(dst_id),
                 color=get_color(dst_id),
             )
-        label = f"{props}\n{edge_name}" if props else edge_name
+        # props_str = {k: (v[:10] + '...') if len(v) > 13 else v for k, v in props.items()}
+        props_str_list: List[str] = []
+        for k in props:
+            if len(props_str_list) >= 2:
+                props_str_list.append("...")
+                break
+            props_str_list.append(f"{truncate(k, 7)}: {truncate(str(props[k]), 8)}")
+        props_str = "\n".join(props_str_list)
+
+        label = f"{props_str}\n{edge_name}" if props else edge_name
         g.add_edge(src_id, dst_id, label=label, title=str(props))
         # networkx
         props["edge_type"] = edge_name
@@ -201,13 +217,13 @@ def create_graph(result_df):
 
 
 def query_nebulagraph(
-    query,
-    space_name,
-    address,
-    port,
-    user="root",
-    password="nebula",
-):
+    query: str,
+    space_name: str,
+    address: str,
+    port: int,
+    user: str = "root",
+    password: str = "nebula",
+) -> None:
     # from nebula3.Config import SessionPoolConfig
     # from nebula3.gclient.net.SessionPool import SessionPool
 
@@ -244,7 +260,7 @@ def query_nebulagraph(
 import networkx as nx
 
 
-def get_gephi_graph(g):
+def get_gephi_graph(g) -> None:
     nx.write_gexf(g, "nebulagraph_export.gexf")
 
 
@@ -287,8 +303,13 @@ load_widget_state()
 
 with st.sidebar:
     st.markdown(
-        f'<div style="display:flex; align-items:center;"><img src="https://raw.githubusercontent.com/nebula-contrib/nebulagraph-docker-ext/main/nebulagraph.svg" style="margin-right:10px; height:50px; width:auto;">'
-        f"<h4>NebulaGraph Gephi</h4></div>",
+        """
+<div style="display:flex; align-items:center;">
+    <img src="https://raw.githubusercontent.com/nebula-contrib/nebulagraph-docker-ext/main/nebulagraph.svg"
+        style="margin-right:10px; height:50px; width:auto;">
+    <h4>NebulaGraph Gephi</h4>
+</div>
+        """,
         unsafe_allow_html=True,
     )
     st.sidebar.markdown("---")
@@ -321,6 +342,9 @@ with st.sidebar:
     if "result_df" not in st.session_state:
         result_df = persist("result_df")
         st.session_state.result_df = None
+    if "excuted_clicked" not in st.session_state:
+        excuted_clicked = persist("excuted_clicked")
+        st.session_state.excuted_clicked = False
 
     st.sidebar.markdown("---")
 
@@ -351,8 +375,10 @@ with st.sidebar:
 
 with tab_query:
     st.info(
-        "🧙‍♂️　Query NebulaGraph then Download and put the `GEXF` file to [Gephi](https://gephi.org/gephi-lite/) "
-        "for more analysis and visualization."
+        "Query NebulaGraph then Download and put the `GEXF` file to"
+        " [Gephi](https://gephi.org/gephi-lite/) "
+        "for more analysis and visualization. ",
+        icon="🧙‍♂️",
     )
 
     with st.expander("▷ Console", expanded=True):
@@ -362,7 +388,8 @@ with tab_query:
             query = st_ace(
                 value="MATCH p=()-[]->() \nRETURN p LIMIT 50;",
                 height=170,
-                annotations="""# Query SUBGRAPH, PATH, NODES AND EDGES to enable visualization.
+                annotations="""# Query SUBGRAPH, PATH, \
+NODES AND EDGES to enable visualization.
             MATCH p=(v)-[]->()
             WHERE id(v) == "player100"
             RETURN p LIMIT 50;
@@ -376,24 +403,6 @@ with tab_query:
                 theme="solarized_dark",
                 auto_update=True,
             )
-            # query = st.text_area(
-            #     "Query Input Field",
-            #     height=190,
-            #     value="MATCH p=()-[]->() \nRETURN p LIMIT 50;",
-            #     key="query",
-            #     label_visibility="collapsed",
-            #     help="Query SUBGRAPH, PATH, NODES AND EDGES to enable visualization.",
-            #     placeholder="""# Query SUBGRAPH, PATH, NODES AND EDGES to enable visualization.
-            # MATCH p=(v)-[]->()
-            # WHERE id(v) == "player100"
-            # RETURN p LIMIT 50;
-            # # or
-            # GET SUBGRAPH WITH PROP 2 STEPS FROM "player100"
-            # YIELD VERTICES AS NODES, EDGES AS RELATIONSHIPS;
-            # # or
-            # FIND PATH FROM "player102" TO "team204" OVER * YIELD path AS p;
-            # """,
-            # )
 
         with buttons:
             space_name = st.selectbox(
@@ -429,18 +438,24 @@ with tab_query:
                 st.session_state.g = g
                 get_gephi_graph(g_nx)
                 with open("nebulagraph_export.gexf", "rb") as f:
-                    if st.download_button(
+                    st.download_button(
                         label="⬇　.GEXF File",
                         use_container_width=True,
                         data=f.read(),
                         type="primary",
                         file_name="nebulagraph_export.gexf",
                         mime="application/xml",
-                    ):
-                        st.toast(
-                            "Files cannot be downloaded in Docker Extension, visit from browser instead",
-                            icon="💡",
-                        )
+                    )
+                st.session_state.excuted_clicked = True
+
+        if st.session_state.excuted_clicked:
+            st.toast(
+                "Hint: Download the `.gexf` file using a browser. "
+                "If you're using the `Docker Extension` embed window, "
+                "just click go to [http://127.0.0.1:17005](http://127.0.0.1:17005)"
+                " instead 😄.",
+                icon="💡",
+            )
 
     if st.session_state.g is not None:
         g = st.session_state.g
