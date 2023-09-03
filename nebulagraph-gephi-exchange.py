@@ -449,12 +449,13 @@ NODES AND EDGES to enable visualization.
                 st.session_state.excuted_clicked = True
 
         if st.session_state.excuted_clicked:
-            st.toast(
-                "Hint: Download the `.gexf` file using a browser. "
+            st.warning(
+                "Hint: Ensure to download the `.gexf` file from a browser. "
                 "If you're using the `Docker Extension` embed window, "
                 "just click go to [http://127.0.0.1:17005](http://127.0.0.1:17005)"
                 " instead 😄.",
                 icon="💡",
+
             )
 
     if st.session_state.g is not None:
