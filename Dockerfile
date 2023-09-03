@@ -11,7 +11,7 @@ RUN pip install --upgrade pip && \
 
 COPY nebulagraph-gephi-exchange.py .
 
-CMD ["streamlit", "run", "nebulagraph-gephi-exchange.py", "--server.port", "8501"]
+CMD ["streamlit", "run", "nebulagraph-gephi-exchange.py", "--server.port", "8501", "--theme.base", "dark"]
 
 EXPOSE 8501
 
