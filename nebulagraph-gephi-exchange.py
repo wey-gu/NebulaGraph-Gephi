@@ -228,7 +228,7 @@ def query_nebulagraph(
             if space_name:
                 session.execute("USE {}".format(space_name))
             result = session.execute(query)
-            print(f"[debug]: {result}")
+            # print(f"[debug]: {result}")
         connection_pool.close()
     except Exception as e:
         st.warning(e)
