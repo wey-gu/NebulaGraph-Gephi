@@ -397,7 +397,7 @@ with tab_query:
 
         with buttons:
             space_name = st.selectbox(
-                "",
+                "Graph Space",
                 st.session_state.space_name_list,
                 key="space_name",
             )
