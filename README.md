@@ -1,4 +1,4 @@
-# NebulaGrahp Gephi Exchange
+# **Nebula**Grahp **Gephi* Exchange
 
 ![for NebulaGraph](https://img.shields.io/badge/for-NebulaGraph-blue?link=https://github.com/vesoft-inc/nebula) ![Gephi](https://img.shields.io/badge/Gephi-supported-brightgreen?link=https://github.com/gephi/gephi-lite/) ![Docker Extension](https://img.shields.io/badge/docker-extension-blue?logo=docker&link=https://hub.docker.com/extensions/weygu/nebulagraph-dd-ext) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/wey-gu/NebulaGraph-Gephi) [![Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg?)](https://nebulagraph-gephi.streamlit.app/)
 
