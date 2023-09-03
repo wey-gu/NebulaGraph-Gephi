@@ -59,7 +59,19 @@ def result_to_df(result):
     return pd.DataFrame(d)
 
 
-COLORS = ["#E2DBBE", "#D5D6AA", "#9DBBAE", "#769FB6", "#188FA7"]
+# COLORS = ["#E2DBBE", "#D5D6AA", "#9DBBAE", "#769FB6", "#188FA7"]
+# solarized dark
+COLORS = [
+    "#93A1A1",
+    "#B58900",
+    "#CB4B16",
+    "#DC322F",
+    "#D33682",
+    "#6C71C4",
+    "#268BD2",
+    "#2AA198",
+    "#859900",
+]
 
 
 def get_color(input_str):
@@ -84,7 +96,18 @@ def render_pd_item(g, g_nx, item):
             for k, v in props_raw.items()
         }
 
-        g.add_node(node_id, label=node_id, title=str(props), color=get_color(node_id))
+        if "name" in props:
+            label = props["name"]
+        else:
+            label = f"tag: {tags}, id: {node_id}"
+            for k in props:
+                if "name" in str(k).lower():
+                    label = props[k]
+                    break
+        if "id" not in props:
+            props["id"] = node_id
+
+        g.add_node(node_id, label=label, title=str(props), color=get_color(node_id))
 
         # networkx
         if len(tags) > 1:
@@ -139,8 +162,8 @@ def create_graph(result_df):
         cdn_resources="in_line",
         height="600px",
         width="100%",
-        bgcolor="#262730",
-        font_color="#F8F9FB",
+        bgcolor="#002B36",
+        font_color="#93A1A1",
         neighborhood_highlight=True,
         # select_menu=True,
         filter_menu=True,
@@ -149,13 +172,31 @@ def create_graph(result_df):
     for _, row in result_df.iterrows():
         for item in row:
             render_pd_item(g, g_nx, item)
+    # configure pyvis Network node size based on node degree
+    for node_id in g.get_nodes():
+        if node_id in g_nx.nodes:
+            node_degree = g_nx.degree(node_id)
+            import math
+
+            g.get_node(node_id)["size"] = math.log(node_degree + 2) * 10
+
     g.repulsion(
-        node_distance=100,
+        node_distance=90,
         central_gravity=0.2,
         spring_length=200,
         spring_strength=0.05,
         damping=0.09,
     )
+
+    # g.hrepulsion(
+    #     node_distance=100,
+    #     central_gravity=0.2,
+    #     spring_length=200,
+    #     spring_strength=0.05,
+    #     damping=0.09,
+    # )
+    # g.force_atlas_2based(
+    # )
     return g, g_nx
 
 
@@ -252,11 +293,21 @@ with st.sidebar:
     )
     st.sidebar.markdown("---")
 
-    graphd_host = st.sidebar.text_input("graphd host", value="graphd", key="graphd_host", label_visibility="collapsed")
-    graphd_port = st.sidebar.number_input("graphd port", value=9669, key="graphd_port", label_visibility="collapsed")
-    user = st.sidebar.text_input("user", value="root", key="user", label_visibility="collapsed")
+    graphd_host = st.sidebar.text_input(
+        "graphd host", value="graphd", key="graphd_host", label_visibility="collapsed"
+    )
+    graphd_port = st.sidebar.number_input(
+        "graphd port", value=9669, key="graphd_port", label_visibility="collapsed"
+    )
+    user = st.sidebar.text_input(
+        "user", value="root", key="user", label_visibility="collapsed"
+    )
     password = st.sidebar.text_input(
-        "passwore", value="nebula", type="password", key="password", label_visibility="collapsed"
+        "passwore",
+        value="nebula",
+        type="password",
+        key="password",
+        label_visibility="collapsed",
     )
     if "space_name_list" not in st.session_state:
         space_name_list = persist("space_name_list")
@@ -386,7 +437,10 @@ with tab_query:
                         file_name="nebulagraph_export.gexf",
                         mime="application/xml",
                     ):
-                        st.toast('Files cannot be downloaded in Docker Extension, visit from browser instead', icon='💡')
+                        st.toast(
+                            "Files cannot be downloaded in Docker Extension, visit from browser instead",
+                            icon="💡",
+                        )
 
     if st.session_state.g is not None:
         g = st.session_state.g
@@ -400,7 +454,13 @@ with tab_query:
         result_df = st.session_state.result_df
         for _, row in result_df.iterrows():
             for item in row:
-                if type(item) in [PathWrapper, GeographyWrapper, Node, Relationship, list]:
+                if type(item) in [
+                    PathWrapper,
+                    GeographyWrapper,
+                    Node,
+                    Relationship,
+                    list,
+                ]:
                     raw_data = True
                     break
 
