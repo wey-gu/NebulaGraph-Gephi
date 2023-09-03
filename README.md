@@ -1,6 +1,6 @@
 # **Nebula**Grahp **Gephi** Exchange
 
-![for NebulaGraph](https://img.shields.io/badge/for-NebulaGraph-blue?link=https://github.com/vesoft-inc/nebula) ![Gephi](https://img.shields.io/badge/Gephi-supported-brightgreen?link=https://github.com/gephi/gephi-lite/) ![Docker Extension](https://img.shields.io/badge/docker-extension-blue?logo=docker&link=https://hub.docker.com/extensions/weygu/nebulagraph-dd-ext) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/wey-gu/NebulaGraph-Gephi) [![Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg?)](https://nebulagraph-gephi.streamlit.app/)
+![for NebulaGraph](https://img.shields.io/badge/Toolchai-NebulaGraph-blue?link=https://github.com/vesoft-inc/nebula) ![Gephi](https://img.shields.io/badge/Gephi-Supported-brightgreen?link=https://github.com/gephi/gephi-lite/) ![Docker Image](https://img.shields.io/docker/v/weygu/nebulagraph-gephi-exchange?label=Docker%20Hub&logo=docker&link=https://hub.docker.com/r/weygu/nebulagraph-gephi-exchange) ![Docker Extension](https://img.shields.io/badge/Docker-Extension-blue?logo=docker&link=https://hub.docker.com/extensions/weygu/nebulagraph-dd-ext) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/wey-gu/NebulaGraph-Gephi) [![Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg?)](https://nebulagraph-gephi.streamlit.app/) 
 
 Gephi is an Awesome Graph Algo and Vis tool! If you would like to visualize your data on NebulaGraph with it, this is the way to go.
 
