@@ -438,7 +438,7 @@ NODES AND EDGES to enable visualization.
             )
 
             if st.button(
-                "➡　　Execute",
+                "Execute",
                 use_container_width=True,
                 type="secondary",
                 disabled=not bool(st.session_state.space_name),
@@ -472,7 +472,7 @@ NODES AND EDGES to enable visualization.
                 get_gephi_graph(g_nx)
                 with open("nebulagraph_export.gexf", "rb") as f:
                     st.download_button(
-                        label="⬇　.GEXF File",
+                        label="GEXF File",
                         use_container_width=True,
                         data=f.read(),
                         type="primary",
@@ -535,7 +535,7 @@ NODES AND EDGES to enable visualization.
             # download buttons
             # two col in one row
             col0, col1, col2 = st.columns(
-                [1, 8, 1],
+                [2, 8, 2],
                 gap="small",
             )
             with col1:
