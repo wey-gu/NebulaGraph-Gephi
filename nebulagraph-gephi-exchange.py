@@ -452,8 +452,8 @@ NODES AND EDGES to enable visualization.
             st.warning(
                 "Hint: Ensure to download the `.gexf` file from a browser. "
                 "If you're using the `Docker Extension` embed window, "
-                "just click go to [http://127.0.0.1:17005](http://127.0.0.1:17005)"
-                " instead 😄.",
+                "just click [http://127.0.0.1:17005](http://127.0.0.1:17005)"
+                " and visit from browser instead 😄.",
                 icon="💡",
 
             )
