@@ -1,18 +1,35 @@
+import math
 import sys
-
 from typing import List, Dict
 
+import networkx as nx
+import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
+from nebula3.Config import Config
+from nebula3.data.DataObject import Node, PathWrapper, Relationship, GeographyWrapper
+from nebula3.data.ResultSet import ResultSet
+from nebula3.gclient.net import ConnectionPool
+from pyvis.network import Network
+from streamlit import session_state as _state
 from streamlit_ace import st_ace
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stdin.reconfigure(encoding="utf-8")
 
-
-from streamlit import session_state as _state
-
 _PERSIST_STATE_KEY = f"{__name__}_PERSIST"
+
+
+INIT_QUERY = """\
+MATCH p=()-[]->() RETURN p LIMIT 30;
+
+GET SUBGRAPH WITH PROP 2 STEPS FROM "player100"
+    YIELD VERTICES AS nodes,
+          EDGES AS relationships;
+
+FIND SHORTEST PATH FROM "player102" TO "team204" OVER *
+    YIELD path AS shortest_path;
+"""
 
 
 # for session_state
@@ -42,13 +59,14 @@ def load_widget_state() -> None:
 
 # for nebulagraph
 from nebula3.data.DataObject import Node, PathWrapper, Relationship, GeographyWrapper
+from nebula3.gclient.net import ConnectionPool
+from nebula3.Config import Config
+from nebula3.data.ResultSet import ResultSet
 
 
 def result_to_df(result) -> Dict[str, list]:
     if result is None:
         return None
-
-    import pandas as pd
 
     columns = result.keys()
     d: Dict[str, list] = {}
@@ -99,7 +117,7 @@ def render_pd_item(g, g_nx, item):
         for tag in tags:
             props_raw.update(item.properties(tag))
         props = {
-            k: str(v.cast()) if isinstance(v.cast(), GeographyWrapper) else v.cast()
+            k: str(v.cast()) if hasattr(v, "cast") else str(v)
             for k, v in props_raw.items()
         }
 
@@ -127,7 +145,7 @@ def render_pd_item(g, g_nx, item):
         edge_name = item.edge_name()
         props_raw = item.properties()
         props = {
-            k: str(v.cast()) if isinstance(v.cast(), GeographyWrapper) else v.cast()
+            k: str(v.cast()) if hasattr(v, "cast") else str(v)
             for k, v in props_raw.items()
         }
         # ensure start and end vertex exist in graph
@@ -169,22 +187,22 @@ def render_pd_item(g, g_nx, item):
             render_pd_item(g, g_nx, it)
 
 
-def create_graph(result_df):
-    from pyvis.network import Network
-
-    g = Network(
-        notebook=True,
-        directed=True,
-        cdn_resources="in_line",
-        height="600px",
-        width="100%",
-        bgcolor="#002B36",
-        font_color="#93A1A1",
-        neighborhood_highlight=True,
-        # select_menu=True,
-        filter_menu=True,
-    )
-    g_nx = nx.MultiDiGraph()
+def create_graph(result_df, g: Network = None, g_nx: nx.MultiDiGraph = None):
+    if g is None:
+        g = Network(
+            notebook=True,
+            directed=True,
+            cdn_resources="in_line",
+            height="600px",
+            width="100%",
+            bgcolor="#002B36",
+            font_color="#93A1A1",
+            neighborhood_highlight=True,
+            # select_menu=True,
+            filter_menu=True,
+        )
+    if g_nx is None:
+        g_nx = nx.MultiDiGraph()
     for _, row in result_df.iterrows():
         for item in row:
             render_pd_item(g, g_nx, item)
@@ -192,7 +210,6 @@ def create_graph(result_df):
     for node_id in g.get_nodes():
         if node_id in g_nx.nodes:
             node_degree = g_nx.degree(node_id)
-            import math
 
             g.get_node(node_id)["size"] = math.log(node_degree + 2) * 10
 
@@ -223,33 +240,33 @@ def query_nebulagraph(
     port: int,
     user: str = "root",
     password: str = "nebula",
-) -> None:
-    # from nebula3.Config import SessionPoolConfig
-    # from nebula3.gclient.net.SessionPool import SessionPool
-
-    from nebula3.gclient.net import ConnectionPool
-    from nebula3.Config import Config
-
+) -> List[ResultSet]:
     # define a config
-    config = Config()
-    config.max_connection_pool_size = 10
+    config: Config = Config()
+    config.max_connection_pool_size: int = 10
     # init connection pool
-    connection_pool = ConnectionPool()
+    connection_pool: ConnectionPool = ConnectionPool()
+    results: List[ResultSet] = []
+    queries: str = query.strip().split(";")
+    queries = [q.strip() for q in queries if q]
+    st.session_state.queries = queries
+
     try:
         connection_pool.init([(address, port)], config)
-        with connection_pool.session_context(
-            user,
-            password,
-        ) as session:
-            if space_name:
-                session.execute("USE {}".format(space_name))
-            result = session.execute(query)
-            # print(f"[debug]: {result}")
+        for query in queries:
+            with connection_pool.session_context(
+                user,
+                password,
+            ) as session:
+                if space_name:
+                    session.execute("USE {}".format(space_name))
+                result: ResultSet = session.execute(query)
+            results.append(result)
         connection_pool.close()
     except Exception as e:
         st.warning(e)
         return None
-    return result
+    return results
 
 
 # end for nebulagraph
@@ -257,7 +274,6 @@ def query_nebulagraph(
 # nebulagraph to networkx to gephi
 # from ng_nx import NebulaReader
 # from ng_nx.utils import NebulaGraphConfig
-import networkx as nx
 
 
 def get_gephi_graph(g) -> None:
@@ -339,22 +355,32 @@ with st.sidebar:
     if "g" not in st.session_state:
         g = persist("g")
         st.session_state.g = None
-    if "result_df" not in st.session_state:
-        result_df = persist("result_df")
+    if "results" not in st.session_state:
+        results = persist("results")
+        st.session_state.results = None
+    if "result_dfs" not in st.session_state:
+        result_dfs = persist("result_dfs")
         st.session_state.result_df = None
     if "excuted_clicked" not in st.session_state:
         excuted_clicked = persist("excuted_clicked")
         st.session_state.excuted_clicked = False
+    if "raw_pyvis_html" not in st.session_state:
+        raw_pyvis_html = persist("raw_pyvis_html")
+        st.session_state.raw_pyvis_html = ""
+    if "queries" not in st.session_state:
+        queries = persist("queries")
+        st.session_state.queries = []
 
     st.sidebar.markdown("---")
 
     if st.sidebar.button("🔓　Connect", type="secondary"):
-        result = query_nebulagraph(
+        results = query_nebulagraph(
             "SHOW SPACES;", None, graphd_host, graphd_port, user, password
         )
-        if result is None:
+        if results is None or len(results) == 0:
             st.warning("connect failed")
             st.stop()
+        result: ResultSet = results[0]
         spaces_df = result_to_df(result)
         st.session_state.space_name_list = spaces_df["Name"].tolist()
         # st.sidebar.dataframe(st.session_state.space_name_list)
@@ -386,7 +412,7 @@ with tab_query:
         input_field, buttons = st.columns([8, 1.3])
         with input_field:
             query = st_ace(
-                value="MATCH p=()-[]->() \nRETURN p LIMIT 50;",
+                value=INIT_QUERY,
                 height=170,
                 annotations="""# Query SUBGRAPH, PATH, \
 NODES AND EDGES to enable visualization.
@@ -417,7 +443,7 @@ NODES AND EDGES to enable visualization.
                 type="secondary",
                 disabled=not bool(st.session_state.space_name),
             ):
-                result = query_nebulagraph(
+                results = query_nebulagraph(
                     query,
                     st.session_state.space_name,
                     st.session_state.graphd_host,
@@ -426,15 +452,22 @@ NODES AND EDGES to enable visualization.
                     st.session_state.password,
                 )
 
-                if result is None:
+                if results is None or len(results) == 0:
                     st.warning("query failed")
                     st.stop()
+                st.session_state.results = results
 
-                result_df = result_to_df(result)
-                st.session_state.result_df = result_df
+                result_dfs = []
+                st.session_state.g = None
+                g, g_nx = None, None
 
-                # create pyvis graph
-                g, g_nx = create_graph(result_df)
+                for result in results:
+                    if result is not None and result.error_code() == 0:
+                        result_df = result_to_df(result)
+                        result_dfs.append(result_df)
+                        # create pyvis graph
+                        g, g_nx = create_graph(result_df, g, g_nx)
+
                 st.session_state.g = g
                 get_gephi_graph(g_nx)
                 with open("nebulagraph_export.gexf", "rb") as f:
@@ -446,7 +479,15 @@ NODES AND EDGES to enable visualization.
                         file_name="nebulagraph_export.gexf",
                         mime="application/xml",
                     )
+                st.session_state.result_dfs = result_dfs
                 st.session_state.excuted_clicked = True
+
+        if st.session_state.results is not None:
+            for result in st.session_state.results:
+                if result.error_code() != 0:
+                    st.markdown("---")
+                    st.warning(result.error_msg())
+                    st.stop()
 
         if st.session_state.excuted_clicked:
             st.warning(
@@ -455,48 +496,96 @@ NODES AND EDGES to enable visualization.
                 "just click [http://127.0.0.1:17005](http://127.0.0.1:17005)"
                 " and visit from browser instead 😄.",
                 icon="💡",
-
             )
 
     if st.session_state.g is not None:
         g = st.session_state.g
-        # render with random file name
-        graph_html = g.generate_html()
+        g_is_renderable = g.get_nodes() and g.get_edges()
 
-        components.html(graph_html, height=720, scrolling=False)
+        if g_is_renderable:
+            # render with random file name
+            graph_html = g.generate_html()
+            components.html(graph_html, height=720, scrolling=False)
 
-        # check all value to see whether there is a path or a GeographyWrapper
-        raw_data = False
-        result_df = st.session_state.result_df
-        for _, row in result_df.iterrows():
-            for item in row:
-                if type(item) in [
-                    PathWrapper,
-                    GeographyWrapper,
-                    Node,
-                    Relationship,
-                    list,
-                ]:
-                    raw_data = True
-                    break
+        for index in range(len(st.session_state.result_dfs)):
+            # check all value to see whether there is any nested raw data, in case yes
+            # then we'll cast all values to string
+            raw_data = False
+            result_df = st.session_state.result_dfs[index]
+            df_is_empty = result_df.empty
+            for _, row in result_df.iterrows():
+                for item in row:
+                    if type(item) in [
+                        PathWrapper,
+                        GeographyWrapper,
+                        Node,
+                        Relationship,
+                        list,
+                    ]:
+                        raw_data = True
+                        break
 
-        if not raw_data:
+            if not raw_data:
+                csv_df = result_df
+
+            else:
+                # format result_df to string values
+                csv_df = result_df.applymap(lambda x: str(x))
+
+            # download buttons
+            # two col in one row
+            col0, col1, col2 = st.columns(
+                [1, 8, 1],
+                gap="small",
+            )
+            with col1:
+                pass
+            with col0:
+                if g_is_renderable:
+                    g.filter_menu = False
+                    st.session_state.raw_pyvis_html = g.generate_html()
+                    if st.session_state.raw_pyvis_html != "" and index == 0:
+                        st.download_button(
+                            label="⬇　 HTML File",
+                            data=st.session_state.raw_pyvis_html,
+                            type="secondary",
+                            file_name="nebulagraph_export.html",
+                            mime="text/html",
+                            use_container_width=True,
+                        )
+            with col2:
+                if not df_is_empty:
+                    # button to download csv
+                    st.download_button(
+                        label=f"⬇　.CSV File {index + 1}",
+                        data=csv_df.to_csv(index=False),
+                        type="secondary",
+                        file_name="nebulagraph_export.csv",
+                        mime="text/csv",
+                        use_container_width=True,
+                    )
+            # download buttons end
+
+            # df table
+            st.markdown("---")
+            st.markdown(
+                f"""
+```cypher
+-- Query {index + 1}
+{st.session_state.queries[index]}
+```
+"""
+            )
             try:
-                st.dataframe(result_df)
+                st.dataframe(
+                    csv_df,
+                    use_container_width=True,
+                    hide_index=True,
+                )
             except Exception as e:
                 st.warning(e)
-        else:
-            # format result_df to string values
-            result_df_str = result_df.applymap(lambda x: str(x))
-            st.markdown("---")
-            st.dataframe(
-                result_df_str,
-                use_container_width=True,
-                hide_index=True,
-            )
-    # TODO:
-    # - [ ] add a button to download the graph as html file
-    # - [ ] add a button to download the result as csv file
+            # df table end
+
 
 with tab_gephi:
     # iframe of https://gephi.org/gephi-lite/

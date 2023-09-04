@@ -11,12 +11,10 @@ Features:
 - Query NebulaGraph
 - Render results
 - Export result to a [gexf file](https://raw.githubusercontent.com/wey-gu/NebulaGraph-Gephi/main/example/nebulagraph_export.gexf) for Gephi
+- Download HTML file for any renderable graph
+- Download CSV result for any query(or Multiple Queries)
 - Graph Algorithm and Visualization with [Gephi-Lite](https://github.com/gephi/gephi-lite/)
 
-TODO
-
-- [ ] Download as HTML
-- [ ] Download the result as a CSV
 
 ## 🚀 How to
 
