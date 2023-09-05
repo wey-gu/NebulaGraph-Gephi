@@ -2,5 +2,12 @@ services:
   nebulagraph-gephi:
     container_name: nebulagraph-gephi
     image: weygu/nebulagraph-gephi-exchange:latest
+    pull_policy: always
     ports:
       - "8501:8501"
+#     networks:
+#       - nebula-net
+
+# networks:
+#   nebula-net:
+#     external: true
