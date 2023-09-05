@@ -357,6 +357,11 @@ with st.sidebar:
         st.session_state.space_name_list = spaces_df["Name"].tolist()
         # st.sidebar.dataframe(st.session_state.space_name_list)
         persist("space_name")
+        # clear all results
+        st.session_state.results = None
+        st.session_state.result_dfs = None
+        st.session_state.g = None
+        st.session_state.excuted_clicked = False
 
 # main page
 
