@@ -597,14 +597,15 @@ NODES AND EDGES to enable visualization.
 
             # df table
             st.markdown("---")
-            st.markdown(
-                f"""
+            if len(st.session_state.queries) >= index + 1:
+                st.markdown(
+                    f"""
 ```cypher
 -- Query {index + 1}
 {st.session_state.queries[index]}
 ```
-"""
-            )
+    """
+                )
             try:
                 st.dataframe(
                     csv_df,
