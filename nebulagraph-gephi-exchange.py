@@ -321,9 +321,11 @@ with st.sidebar:
     st.markdown(
         """
 <div style="display:flex; align-items:center;">
-    <img src="https://raw.githubusercontent.com/nebula-contrib/nebulagraph-docker-ext/main/nebulagraph.svg"
-        style="margin-right:10px; height:50px; width:auto;">
-    <h4>NebulaGraph Gephi</h4>
+        <a href="https://github.com/wey-gu/NebulaGraph-Gephi">
+        <img src="https://raw.githubusercontent.com/nebula-contrib/nebulagraph-docker-ext/main/nebulagraph.svg"
+            style="margin-right:10px; height:50px; width:auto;">
+        </a>
+        <h4>NebulaGraph Gephi</h4>
 </div>
         """,
         unsafe_allow_html=True,
