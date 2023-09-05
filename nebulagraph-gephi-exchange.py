@@ -163,11 +163,9 @@ def render_pd_item(g, g_nx, item):
                 title=str(dst_id),
                 color=get_color(dst_id),
             )
-        # props_str = {k: (v[:10] + '...') if len(v) > 13 else v for k, v in props.items()}
         props_str_list: List[str] = []
         for k in props:
-            if len(props_str_list) >= 2:
-                props_str_list.append("...")
+            if len(props_str_list) >= 1:
                 break
             props_str_list.append(f"{truncate(k, 7)}: {truncate(str(props[k]), 8)}")
         props_str = "\n".join(props_str_list)
@@ -545,7 +543,9 @@ NODES AND EDGES to enable visualization.
             with col0:
                 if g_is_renderable:
                     g.filter_menu = False
-                    st.session_state.raw_pyvis_html = g.generate_html()
+                    st.session_state.raw_pyvis_html = g.generate_html().replace(
+                        "height: 600px",
+                        "height: 1080px")
                     if st.session_state.raw_pyvis_html != "" and index == 0:
                         st.download_button(
                             label="⬇　 HTML File",
