@@ -269,38 +269,10 @@ def query_nebulagraph(
 
 # end for nebulagraph
 
-# nebulagraph to networkx to gephi
-# from ng_nx import NebulaReader
-# from ng_nx.utils import NebulaGraphConfig
 
-
+# get gephi graph from networkx graph
 def get_gephi_graph(g) -> None:
     nx.write_gexf(g, "nebulagraph_export.gexf")
-
-
-# def get_networkx_graph(
-#     graphd_host,
-#     user,
-#     password,
-#     space,
-#     edges,
-#     properties,
-#     limit=1000,
-# ):
-#     nebula_config = NebulaGraphConfig(
-#         graphd_hosts=[graphd_host],
-#         user=user,
-#         password=password,
-#         space=space,
-#     )
-#     nebula_reader = NebulaReader(
-#         space=space,
-#         edges=edges,
-#         properties=properties,
-#         nebula_config=nebula_config,
-#         limit=limit,
-#     )
-#     return nebula_reader.read()
 
 
 # streamlit app
@@ -373,7 +345,7 @@ with st.sidebar:
 
     st.sidebar.markdown("---")
 
-    if st.sidebar.button("🔓　Connect", type="secondary"):
+    if st.sidebar.button("🔗　Connect", type="secondary"):
         results = query_nebulagraph(
             "SHOW SPACES;", None, graphd_host, graphd_port, user, password
         )
@@ -400,6 +372,58 @@ with st.sidebar:
 )
 
 with tab_query:
+    if len(st.session_state.space_name_list) == 0:
+        # floating window before login
+        st.markdown(
+            """
+            <style>
+                .floating-window {
+                    position: absolute;
+                    z-index: 1;
+                    left: -20px;
+                    top: -10px;
+                    right: -20px;
+                    bottom: 0.1px;
+                    background-color: rgba(25, 49, 75, 0.30);
+                    padding: 10px;
+                    border: 1px solid #48494D;
+                    border-radius: 10px;
+                    min-height: 720px;
+                    backdrop-filter: blur(5px);
+                }
+                .text-container {
+                    position: absolute;
+                    z-index: 1;
+                    left: 300px;
+                    top: 300px;
+                    right: 300px;
+                    bottom: 300px;
+                    background-color: #0E1118;
+                    padding: 10px;
+                    border: 0px solid #48494D;
+                    border-radius: 10px;
+                    min-height: 20px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+                }
+            </style>
+            <div class="floating-window">
+                <div class="text-container">
+                    <p style=
+                    "position: absolute;
+                    top: 50%; left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: #FAFAFA;
+                    ">
+                        🔗　 Connect to <span> </span>
+                        <img src="https://raw.githubusercontent.com/nebula-contrib/nebulagraph-docker-ext/main/nebulagraph.svg" alt=" " style="height: 16px; width: auto;">
+                        <span style="color: #009EFF;"><strong>Nebula</strong></span>Graph first.                        
+                    </p>
+                </div>
+            </div>
+        """,
+            unsafe_allow_html=True,
+        )
+
     st.info(
         "Query NebulaGraph then Download and put the `GEXF` file to"
         " [Gephi](https://gephi.org/gephi-lite/) "
@@ -544,8 +568,8 @@ NODES AND EDGES to enable visualization.
                 if g_is_renderable:
                     g.filter_menu = False
                     st.session_state.raw_pyvis_html = g.generate_html().replace(
-                        "height: 600px",
-                        "height: 1080px")
+                        "height: 600px", "height: 1080px"
+                    )
                     if st.session_state.raw_pyvis_html != "" and index == 0:
                         st.download_button(
                             label="⬇　 HTML File",
