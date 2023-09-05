@@ -15,6 +15,8 @@ Features:
 - Download CSV result for any query(or Multiple Queries)
 - Graph Algorithm and Visualization with [Gephi-Lite](https://github.com/gephi/gephi-lite/)
 
+![multi_query_screencapture](https://github.com/wey-gu/NebulaGraph-Gephi/assets/1651790/00524169-70ee-469b-9408-92fd58840b37)
+
 
 ## 🚀 How to
 
