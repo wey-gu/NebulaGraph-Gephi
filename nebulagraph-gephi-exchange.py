@@ -245,8 +245,8 @@ def query_nebulagraph(
     # init connection pool
     connection_pool: ConnectionPool = ConnectionPool()
     results: List[ResultSet] = []
-    queries: str = query.strip().split(";")
-    queries = [q.strip() for q in queries if q]
+    queries_raw: List[str] = query.strip().split(";")
+    queries: List[str] = [q.strip() for q in queries_raw if q.strip()]
     st.session_state.queries = queries
 
     try:
@@ -534,9 +534,7 @@ NODES AND EDGES to enable visualization.
         if g_is_renderable:
             # render with random file name
             graph_html = g.generate_html()
-            graph_html.replace(
-                "height: 600px", "height: 720px"
-            )
+            graph_html.replace("height: 600px", "height: 720px")
             components.html(graph_html, height=720, scrolling=False)
 
         for index in range(len(st.session_state.result_dfs)):
