@@ -262,7 +262,7 @@ def query_nebulagraph(
             results.append(result)
         connection_pool.close()
     except Exception as e:
-        st.warning(e)
+        st.warning(e, icon="⚠️")
         return None
     return results
 
@@ -342,6 +342,9 @@ with st.sidebar:
     if "queries" not in st.session_state:
         queries = persist("queries")
         st.session_state.queries = []
+    if "connect_clicked" not in st.session_state:
+        connect_clicked = persist("connect_clicked")
+        st.session_state.connect_clicked = False
 
     st.sidebar.markdown("---")
 
@@ -350,12 +353,13 @@ with st.sidebar:
             "SHOW SPACES;", None, graphd_host, graphd_port, user, password
         )
         if results is None or len(results) == 0:
-            st.warning("connect failed")
+            st.warning("connect failed", icon="⚠️")
             st.stop()
         result: ResultSet = results[0]
         spaces_df = result_to_df(result)
         st.session_state.space_name_list = spaces_df["Name"].tolist()
         # st.sidebar.dataframe(st.session_state.space_name_list)
+        st.session_state.connect_clicked = True
         persist("space_name")
         # clear all results
         st.session_state.results = None
@@ -376,56 +380,88 @@ with st.sidebar:
     ]
 )
 
+float_window_css = """
+<style>
+    .floating-window {
+        position: absolute;
+        z-index: 1;
+        left: -20px;
+        top: -10px;
+        right: -20px;
+        bottom: 0.1px;
+        background-color: rgba(25, 49, 75, 0.30);
+        padding: 10px;
+        border: 1px solid #48494D;
+        border-radius: 10px;
+        min-height: 720px;
+        backdrop-filter: blur(5px);
+    }
+    .text-container {
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #0E1118;
+        padding: 20px 2px;
+        border: 0px solid #48494D;
+        border-radius: 10px;
+        min-height: 60px;
+        min-width: 300px;
+        white-space: nowrap;
+        # box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    }
+</style>
+
+"""
+nebula_logo_svg = """<img
+     src="https://raw.githubusercontent.com/nebula-contrib/nebulagraph-docker-ext/main/nebulagraph.svg"
+     alt=" "
+     style="height: 16px; width: auto;">"""
+float_window_css_no_space = float_window_css.replace(
+    "backdrop-filter: blur(5px);", "").replace(
+        "min-height: 60px;",
+        "min-height: 124px;"
+    ).replace(
+        "min-width: 300px;",
+        "min-width: 440px;"
+    )
+
+float_window_html = f"""
+<div class="floating-window">
+    <div class="text-container">
+        <p style=
+        "position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        color: #FAFAFA;
+        ">
+            🔗　 Connect to <span> </span>{nebula_logo_svg} <span style="color: #009EFF;"><strong>Nebula</strong></span>Graph first.
+        </p>
+    </div>
+</div>
+"""
+
+float_window_html_no_space = float_window_html.replace(
+    "Graph first.",
+    f"Graph done !<br/>"
+    f"🔎　 Opps... no graph spaces found. <br/>"
+    f"<span style='color: #88846F;'>💡　 Try creating one from {nebula_logo_svg} "
+    f"Studio's starter dataset.</span>").replace(
+        "🔗", "✅")
+
+
 with tab_query:
-    if len(st.session_state.space_name_list) == 0:
+    if st.session_state.connect_clicked:
+        if len(st.session_state.space_name_list) == 0:
         # floating window before login
+            st.markdown(
+                float_window_css_no_space + float_window_html_no_space,
+                unsafe_allow_html=True,
+            )
+    else:
         st.markdown(
-            """
-            <style>
-                .floating-window {
-                    position: absolute;
-                    z-index: 1;
-                    left: -20px;
-                    top: -10px;
-                    right: -20px;
-                    bottom: 0.1px;
-                    background-color: rgba(25, 49, 75, 0.30);
-                    padding: 10px;
-                    border: 1px solid #48494D;
-                    border-radius: 10px;
-                    min-height: 720px;
-                    backdrop-filter: blur(5px);
-                }
-                .text-container {
-                    position: absolute;
-                    z-index: 1;
-                    left: 300px;
-                    top: 300px;
-                    right: 300px;
-                    bottom: 300px;
-                    background-color: #0E1118;
-                    padding: 10px;
-                    border: 0px solid #48494D;
-                    border-radius: 10px;
-                    min-height: 20px;
-                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-                }
-            </style>
-            <div class="floating-window">
-                <div class="text-container">
-                    <p style=
-                    "position: absolute;
-                    top: 50%; left: 50%;
-                    transform: translate(-50%, -50%);
-                    color: #FAFAFA;
-                    ">
-                        🔗　 Connect to <span> </span>
-                        <img src="https://raw.githubusercontent.com/nebula-contrib/nebulagraph-docker-ext/main/nebulagraph.svg" alt=" " style="height: 16px; width: auto;">
-                        <span style="color: #009EFF;"><strong>Nebula</strong></span>Graph first.                        
-                    </p>
-                </div>
-            </div>
-        """,
+            float_window_css + float_window_html,
             unsafe_allow_html=True,
         )
 
@@ -460,11 +496,16 @@ NODES AND EDGES to enable visualization.
             )
 
         with buttons:
-            space_name = st.selectbox(
-                "Graph Space",
-                st.session_state.space_name_list,
-                key="space_name",
-            )
+            try:
+                space_name = st.selectbox(
+                    "Graph Space",
+                    st.session_state.space_name_list,
+                    key="space_name",
+                )
+            except Exception as e:
+                st.warning("Failed to get spaces, reload and reconnect, please.",
+                           icon="😵‍💫")
+                st.stop()
 
             if st.button(
                 "Execute",
@@ -482,7 +523,7 @@ NODES AND EDGES to enable visualization.
                 )
 
                 if results is None or len(results) == 0:
-                    st.warning("query failed")
+                    st.warning("query failed", icon="⚠️")
                     st.stop()
                 st.session_state.results = results
 
@@ -515,7 +556,7 @@ NODES AND EDGES to enable visualization.
             for result in st.session_state.results:
                 if result.error_code() != 0:
                     st.markdown("---")
-                    st.warning(result.error_msg())
+                    st.warning(result.error_msg(), icon="⚠️")
                     st.stop()
 
         if st.session_state.excuted_clicked:
@@ -616,7 +657,7 @@ NODES AND EDGES to enable visualization.
                     hide_index=True,
                 )
             except Exception as e:
-                st.warning(e)
+                st.warning(e, icon="⚠️")
             # df table end
 
 
