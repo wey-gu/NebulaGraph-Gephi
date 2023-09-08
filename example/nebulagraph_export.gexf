@@ -1,1367 +1,2954 @@
-<?xml version='1.0' encoding='utf-8'?>
-<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
-  <meta lastmodifieddate="2023-09-05">
-    <creator>NetworkX 3.0</creator>
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf version="1.2" xmlns="http://www.gexf.net/1.2draft" xmlns:viz="http:///www.gexf.net/1.1draft/viz">
+  <meta>
+    <title>nebulagraph_export (6).gexf</title>
+    <authors>NetworkX 3.0</authors>
   </meta>
-  <graph defaultedgetype="directed" mode="static" name="">
-    <attributes mode="static" class="edge">
-      <attribute id="2" title="degree" type="string" />
-      <attribute id="3" title="edge_type" type="string" />
-      <attribute id="4" title="networkx_key" type="long" />
-      <attribute id="5" title="start_year" type="string" />
-      <attribute id="6" title="end_year" type="string" />
+  <graph defaultedgetype="directed">
+    <attributes class="node">
+      <attribute id="name" title="name" type="string"/>
+      <attribute id="age" title="age" type="string"/>
+      <attribute id="modularityClass" title="modularityClass" type="integer"/>
+      <attribute id="pagerank" title="pagerank" type="double"/>
+      <attribute id="rawSize" title="rawSize" type="string"/>
+      <attribute id="title" title="title" type="string"/>
+      <attribute id="geo_point" title="geo_point" type="string"/>
+      <attribute id="address" title="address" type="string"/>
     </attributes>
-    <attributes mode="static" class="node">
-      <attribute id="0" title="name" type="string" />
-      <attribute id="1" title="age" type="string" />
+    <attributes class="edge">
+      <attribute id="degree" title="degree" type="string"/>
+      <attribute id="edge_type" title="edge_type" type="string"/>
+      <attribute id="networkx_key" title="networkx_key" type="integer"/>
+      <attribute id="simmelianStrength" title="simmelianStrength" type="integer"/>
+      <attribute id="rawWeight" title="rawWeight" type="string"/>
+      <attribute id="post_time" title="post_time" type="string"/>
+      <attribute id="start_year" title="start_year" type="string"/>
+      <attribute id="end_year" title="end_year" type="string"/>
     </attributes>
     <nodes>
-      <node id="player130" label="player130">
+      <node id="player148" label="Jason Kidd">
         <attvalues>
-          <attvalue for="0" value="Joel Embiid" />
-          <attvalue for="1" value="25" />
+          <attvalue for="name" value="Jason Kidd"/>
+          <attvalue for="age" value="45"/>
+          <attvalue for="modularityClass" value="0"/>
+          <attvalue for="pagerank" value="0.008462259452362099"/>
+          <attvalue for="rawSize" value="3"/>
         </attvalues>
+        <viz:color r="252" g="141" b="89"/>
+        <viz:size value="3"/>
+        <viz:position x="-85.49810028076172" y="49.626651763916016"/>
       </node>
-      <node id="player149" label="player149">
+      <node id="player127" label="Vince Carter">
         <attvalues>
-          <attvalue for="1" value="22" />
-          <attvalue for="0" value="Ben Simmons" />
+          <attvalue for="name" value="Vince Carter"/>
+          <attvalue for="age" value="42"/>
+          <attvalue for="modularityClass" value="0"/>
+          <attvalue for="pagerank" value="0.009261505228607053"/>
+          <attvalue for="rawSize" value="3.183735091582315"/>
         </attvalues>
+        <viz:color r="252" g="141" b="89"/>
+        <viz:size value="3.183735091582315"/>
+        <viz:position x="-97.40853118896484" y="52.516075134277344"/>
       </node>
-      <node id="team219" label="team219">
+      <node id="player136" label="Steve Nash">
         <attvalues>
-          <attvalue for="0" value="76ers" />
+          <attvalue for="name" value="Steve Nash"/>
+          <attvalue for="age" value="45"/>
+          <attvalue for="modularityClass" value="0"/>
+          <attvalue for="pagerank" value="0.009261505228607053"/>
+          <attvalue for="rawSize" value="3.183735091582315"/>
         </attvalues>
+        <viz:color r="252" g="141" b="89"/>
+        <viz:size value="3.183735091582315"/>
+        <viz:position x="-95.32524108886719" y="50.090187072753906"/>
       </node>
-      <node id="player128" label="player128">
+      <node id="player137" label="Dirk Nowitzki">
         <attvalues>
-          <attvalue for="0" value="Carmelo Anthony" />
-          <attvalue for="1" value="34" />
+          <attvalue for="name" value="Dirk Nowitzki"/>
+          <attvalue for="age" value="40"/>
+          <attvalue for="modularityClass" value="0"/>
+          <attvalue for="pagerank" value="0.009261505228607053"/>
+          <attvalue for="rawSize" value="3.183735091582315"/>
         </attvalues>
+        <viz:color r="252" g="141" b="89"/>
+        <viz:size value="3.183735091582315"/>
+        <viz:position x="-91.26970672607422" y="57.7779655456543"/>
       </node>
-      <node id="player116" label="player116">
+      <node id="post8">
         <attvalues>
-          <attvalue for="1" value="34" />
-          <attvalue for="0" value="LeBron James" />
+          <attvalue for="modularityClass" value="0"/>
+          <attvalue for="pagerank" value="0.02410676417972566"/>
+          <attvalue for="rawSize" value="5.131269888758291"/>
+          <attvalue for="title" value="Frank, the cat"/>
         </attvalues>
+        <viz:color r="252" g="141" b="89"/>
+        <viz:size value="5.131269888758291"/>
+        <viz:position x="-82.77942502530136" y="5.208364274413932"/>
       </node>
-      <node id="player121" label="player121">
+      <node id="team214" label="Suns">
         <attvalues>
-          <attvalue for="1" value="33" />
-          <attvalue for="0" value="Chris Paul" />
+          <attvalue for="name" value="Suns"/>
+          <attvalue for="modularityClass" value="1"/>
+          <attvalue for="pagerank" value="0.012205401857438816"/>
+          <attvalue for="rawSize" value="3.7456507412646807"/>
         </attvalues>
+        <viz:color r="253" g="174" b="118"/>
+        <viz:size value="3.7456507412646807"/>
+        <viz:position x="-25.700328826904297" y="45.13848876953125"/>
       </node>
-      <node id="player129" label="player129">
+      <node id="team223" label="Knicks">
         <attvalues>
-          <attvalue for="1" value="37" />
-          <attvalue for="0" value="Dwyane Wade" />
+          <attvalue for="name" value="Knicks"/>
+          <attvalue for="modularityClass" value="0"/>
+          <attvalue for="pagerank" value="0.009261505228607053"/>
+          <attvalue for="rawSize" value="3.183735091582315"/>
         </attvalues>
+        <viz:color r="252" g="141" b="89"/>
+        <viz:size value="3.183735091582315"/>
+        <viz:position x="-95.78673553466797" y="55.10160446166992"/>
       </node>
-      <node id="team201" label="team201">
+      <node id="team227" label="Nets">
         <attvalues>
-          <attvalue for="0" value="Nuggets" />
+          <attvalue for="name" value="Nets"/>
+          <attvalue for="modularityClass" value="0"/>
+          <attvalue for="pagerank" value="0.009261505228607053"/>
+          <attvalue for="rawSize" value="3.183735091582315"/>
         </attvalues>
+        <viz:color r="252" g="141" b="89"/>
+        <viz:size value="3.183735091582315"/>
+        <viz:position x="-94.5163345336914" y="57.85038375854492"/>
       </node>
-      <node id="team202" label="team202">
+      <node id="team213" label="Mavericks">
         <attvalues>
-          <attvalue for="0" value="Rockets" />
+          <attvalue for="name" value="Mavericks"/>
+          <attvalue for="modularityClass" value="0"/>
+          <attvalue for="pagerank" value="0.010060751004852007"/>
+          <attvalue for="rawSize" value="3.35225199879062"/>
         </attvalues>
+        <viz:color r="252" g="141" b="89"/>
+        <viz:size value="3.35225199879062"/>
+        <viz:position x="-91.2859878540039" y="52.86248779296875"/>
       </node>
-      <node id="team205" label="team205">
+      <node id="player142" label="Klay Thompson">
         <attvalues>
-          <attvalue for="0" value="Thunders" />
+          <attvalue for="name" value="Klay Thompson"/>
+          <attvalue for="age" value="29"/>
+          <attvalue for="modularityClass" value="2"/>
+          <attvalue for="pagerank" value="0.008462259452362099"/>
+          <attvalue for="rawSize" value="3"/>
         </attvalues>
+        <viz:color r="254" g="206" b="147"/>
+        <viz:size value="3"/>
+        <viz:position x="28.297901153564453" y="-60.51662063598633"/>
       </node>
-      <node id="team223" label="team223">
+      <node id="player117" label="Stephen Curry">
         <attvalues>
-          <attvalue for="0" value="Knicks" />
+          <attvalue for="name" value="Stephen Curry"/>
+          <attvalue for="age" value="31"/>
+          <attvalue for="modularityClass" value="2"/>
+          <attvalue for="pagerank" value="0.010859996781096963"/>
+          <attvalue for="rawSize" value="3.507879970951785"/>
         </attvalues>
+        <viz:color r="254" g="206" b="147"/>
+        <viz:size value="3.507879970951785"/>
+        <viz:position x="33.313819885253906" y="-72.5908203125"/>
       </node>
-      <node id="team207" label="team207">
+      <node id="post2">
         <attvalues>
-          <attvalue for="0" value="Clippers" />
+          <attvalue for="modularityClass" value="2"/>
+          <attvalue for="pagerank" value="0.013343226392301143"/>
+          <attvalue for="rawSize" value="3.9271054228579367"/>
+          <attvalue for="title" value="my first bike"/>
         </attvalues>
+        <viz:color r="254" g="206" b="147"/>
+        <viz:size value="3.9271054228579367"/>
+        <viz:position x="23.213605880737305" y="-48.23623275756836"/>
       </node>
-      <node id="team215" label="team215">
+      <node id="team200" label="Warriors">
         <attvalues>
-          <attvalue for="0" value="Hornets" />
+          <attvalue for="name" value="Warriors"/>
+          <attvalue for="modularityClass" value="2"/>
+          <attvalue for="pagerank" value="0.023075035558623357"/>
+          <attvalue for="rawSize" value="5.042220015542654"/>
         </attvalues>
+        <viz:color r="254" g="206" b="147"/>
+        <viz:size value="5.042220015542654"/>
+        <viz:position x="16.96372413635254" y="-32.98761749267578"/>
       </node>
-      <node id="player136" label="player136">
+      <node id="player141" label="Ray Allen">
         <attvalues>
-          <attvalue for="0" value="Steve Nash" />
-          <attvalue for="1" value="45" />
+          <attvalue for="name" value="Ray Allen"/>
+          <attvalue for="age" value="43"/>
+          <attvalue for="modularityClass" value="3"/>
+          <attvalue for="pagerank" value="0.01076478542141871"/>
+          <attvalue for="rawSize" value="3.489952751908698"/>
         </attvalues>
+        <viz:color r="255" g="239" b="176"/>
+        <viz:size value="3.489952751908698"/>
+        <viz:position x="75.10164029081504" y="38.13870325403273"/>
       </node>
-      <node id="player117" label="player117">
+      <node id="player124" label="Rajon Rondo">
         <attvalues>
-          <attvalue for="1" value="31" />
-          <attvalue for="0" value="Stephen Curry" />
+          <attvalue for="name" value="Rajon Rondo"/>
+          <attvalue for="age" value="33"/>
+          <attvalue for="modularityClass" value="3"/>
+          <attvalue for="pagerank" value="0.009478980236733383"/>
+          <attvalue for="rawSize" value="3.2309871909172108"/>
         </attvalues>
+        <viz:color r="255" g="239" b="176"/>
+        <viz:size value="3.2309871909172108"/>
+        <viz:position x="106.20389433930787" y="22.703912589484318"/>
       </node>
-      <node id="player137" label="player137">
+      <node id="post1">
         <attvalues>
-          <attvalue for="1" value="40" />
-          <attvalue for="0" value="Dirk Nowitzki" />
+          <attvalue for="modularityClass" value="3"/>
+          <attvalue for="pagerank" value="0.022513565681850947"/>
+          <attvalue for="rawSize" value="4.992070672606076"/>
+          <attvalue for="title" value="a beautify flower"/>
         </attvalues>
+        <viz:color r="255" g="239" b="176"/>
+        <viz:size value="4.992070672606076"/>
+        <viz:position x="28.681320190429688" y="-6.678936958312988"/>
       </node>
-      <node id="player147" label="player147">
+      <node id="team205" label="Thunders">
         <attvalues>
-          <attvalue for="1" value="36" />
-          <attvalue for="0" value="Amar'e Stoudemire" />
+          <attvalue for="name" value="Thunders"/>
+          <attvalue for="modularityClass" value="3"/>
+          <attvalue for="pagerank" value="0.009478980236733383"/>
+          <attvalue for="rawSize" value="3.2309871909172108"/>
         </attvalues>
+        <viz:color r="255" g="239" b="176"/>
+        <viz:size value="3.2309871909172108"/>
+        <viz:position x="73.38529763894809" y="54.34145967185672"/>
       </node>
-      <node id="player148" label="player148">
+      <node id="team217" label="Celtics">
         <attvalues>
-          <attvalue for="1" value="45" />
-          <attvalue for="0" value="Jason Kidd" />
+          <attvalue for="name" value="Celtics"/>
+          <attvalue for="modularityClass" value="3"/>
+          <attvalue for="pagerank" value="0.012720276451315968"/>
+          <attvalue for="rawSize" value="3.82976882116113"/>
         </attvalues>
+        <viz:color r="255" g="239" b="176"/>
+        <viz:size value="3.82976882116113"/>
+        <viz:position x="85.04810074053361" y="3.1949420061917806"/>
       </node>
-      <node id="team210" label="team210">
+      <node id="team225" label="Bucks">
         <attvalues>
-          <attvalue for="0" value="Lakers" />
+          <attvalue for="name" value="Bucks"/>
+          <attvalue for="modularityClass" value="3"/>
+          <attvalue for="pagerank" value="0.009478980236733383"/>
+          <attvalue for="rawSize" value="3.2309871909172108"/>
         </attvalues>
+        <viz:color r="255" g="239" b="176"/>
+        <viz:size value="3.2309871909172108"/>
+        <viz:position x="91.99013546323593" y="25.81798524366588"/>
       </node>
-      <node id="team213" label="team213">
+      <node id="team229" label="Heat">
         <attvalues>
-          <attvalue for="0" value="Mavericks" />
+          <attvalue for="name" value="Heat"/>
+          <attvalue for="modularityClass" value="3"/>
+          <attvalue for="pagerank" value="0.013823933756005147"/>
+          <attvalue for="rawSize" value="3.9991589021093015"/>
         </attvalues>
+        <viz:color r="255" g="239" b="176"/>
+        <viz:size value="3.9991589021093015"/>
+        <viz:position x="79.75454643488273" y="16.07852268796573"/>
       </node>
-      <node id="team214" label="team214">
+      <node id="player140" label="Grant Hill">
         <attvalues>
-          <attvalue for="0" value="Suns" />
+          <attvalue for="name" value="Grant Hill"/>
+          <attvalue for="age" value="46"/>
+          <attvalue for="modularityClass" value="1"/>
+          <attvalue for="pagerank" value="0.008462259452362099"/>
+          <attvalue for="rawSize" value="3"/>
         </attvalues>
+        <viz:color r="253" g="174" b="118"/>
+        <viz:size value="3"/>
+        <viz:position x="7.39849328994751" y="57.65821838378906"/>
       </node>
-      <node id="player113" label="player113">
+      <node id="player114" label="Tracy McGrady">
         <attvalues>
-          <attvalue for="0" value="Dejounte Murray" />
-          <attvalue for="1" value="29" />
+          <attvalue for="name" value="Tracy McGrady"/>
+          <attvalue for="age" value="39"/>
+          <attvalue for="modularityClass" value="1"/>
+          <attvalue for="pagerank" value="0.012058865445464395"/>
+          <attvalue for="rawSize" value="3.721060842253813"/>
         </attvalues>
+        <viz:color r="253" g="174" b="118"/>
+        <viz:size value="3.721060842253813"/>
+        <viz:position x="9.96374797821045" y="37.99345779418945"/>
       </node>
-      <node id="player100" label="player100">
+      <node id="post10">
         <attvalues>
-          <attvalue for="1" value="42" />
-          <attvalue for="0" value="Tim Duncan" />
+          <attvalue for="modularityClass" value="4"/>
+          <attvalue for="pagerank" value="0.01501832584217436"/>
+          <attvalue for="rawSize" value="4.167868258663212"/>
+          <attvalue for="title" value="I love you, Mom"/>
         </attvalues>
+        <viz:color r="239" g="246" b="195"/>
+        <viz:size value="4.167868258663212"/>
+        <viz:position x="-8.91258716583252" y="42.794429779052734"/>
       </node>
-      <node id="player101" label="player101">
+      <node id="team207" label="Clippers">
         <attvalues>
-          <attvalue for="1" value="36" />
-          <attvalue for="0" value="Tony Parker" />
+          <attvalue for="name" value="Clippers"/>
+          <attvalue for="modularityClass" value="1"/>
+          <attvalue for="pagerank" value="0.00966112811672953"/>
+          <attvalue for="rawSize" value="3.269736675789617"/>
         </attvalues>
+        <viz:color r="253" g="174" b="118"/>
+        <viz:size value="3.269736675789617"/>
+        <viz:position x="9.041863441467285" y="72.76983642578125"/>
       </node>
-      <node id="player104" label="player104">
+      <node id="team224" label="Pistons">
         <attvalues>
-          <attvalue for="1" value="32" />
-          <attvalue for="0" value="Marco Belinelli" />
+          <attvalue for="name" value="Pistons"/>
+          <attvalue for="modularityClass" value="5"/>
+          <attvalue for="pagerank" value="0.010859996781096962"/>
+          <attvalue for="rawSize" value="3.507879970951785"/>
         </attvalues>
+        <viz:color r="208" g="228" b="203"/>
+        <viz:size value="3.507879970951785"/>
+        <viz:position x="32.26544189453125" y="40.423179626464844"/>
       </node>
-      <node id="player105" label="player105">
+      <node id="team226" label="Magic">
         <attvalues>
-          <attvalue for="1" value="31" />
-          <attvalue for="0" value="Danny Green" />
+          <attvalue for="name" value="Magic"/>
+          <attvalue for="modularityClass" value="1"/>
+          <attvalue for="pagerank" value="0.01564718104775576"/>
+          <attvalue for="rawSize" value="4.2513774917978004"/>
         </attvalues>
+        <viz:color r="253" g="174" b="118"/>
+        <viz:size value="4.2513774917978004"/>
+        <viz:position x="17.651691436767578" y="50.922203063964844"/>
       </node>
-      <node id="player106" label="player106">
+      <node id="player138" label="Paul Gasol">
         <attvalues>
-          <attvalue for="1" value="25" />
-          <attvalue for="0" value="Kyle Anderson" />
+          <attvalue for="name" value="Paul Gasol"/>
+          <attvalue for="age" value="38"/>
+          <attvalue for="modularityClass" value="4"/>
+          <attvalue for="pagerank" value="0.008462259452362099"/>
+          <attvalue for="rawSize" value="3"/>
         </attvalues>
+        <viz:color r="239" g="246" b="195"/>
+        <viz:size value="3"/>
+        <viz:position x="-1.9195524454116821" y="48.94078826904297"/>
       </node>
-      <node id="player118" label="player118">
+      <node id="player115" label="Kobe Bryant">
         <attvalues>
-          <attvalue for="1" value="30" />
-          <attvalue for="0" value="Russell Westbrook" />
+          <attvalue for="name" value="Kobe Bryant"/>
+          <attvalue for="age" value="40"/>
+          <attvalue for="modularityClass" value="4"/>
+          <attvalue for="pagerank" value="0.009181580650982558"/>
+          <attvalue for="rawSize" value="3.1660900545781314"/>
         </attvalues>
+        <viz:color r="239" g="246" b="195"/>
+        <viz:size value="3.1660900545781314"/>
+        <viz:position x="-7.623149394989014" y="63.1392936706543"/>
       </node>
-      <node id="player125" label="player125">
+      <node id="player139" label="Marc Gasol">
         <attvalues>
-          <attvalue for="1" value="41" />
-          <attvalue for="0" value="Manu Ginobili" />
+          <attvalue for="name" value="Marc Gasol"/>
+          <attvalue for="age" value="34"/>
+          <attvalue for="modularityClass" value="4"/>
+          <attvalue for="pagerank" value="0.009181580650982558"/>
+          <attvalue for="rawSize" value="3.1660900545781314"/>
         </attvalues>
+        <viz:color r="239" g="246" b="195"/>
+        <viz:size value="3.1660900545781314"/>
+        <viz:position x="-2.9896328449249268" y="64.7554702758789"/>
       </node>
-      <node id="team204" label="team204">
+      <node id="team204" label="Spurs">
         <attvalues>
-          <attvalue for="0" value="Spurs" />
+          <attvalue for="name" value="Spurs"/>
+          <attvalue for="modularityClass" value="4"/>
+          <attvalue for="pagerank" value="0.03693690816993036"/>
+          <attvalue for="rawSize" value="6"/>
         </attvalues>
+        <viz:color r="239" g="246" b="195"/>
+        <viz:size value="6"/>
+        <viz:position x="0.3189444969536339" y="7.6262393960908215"/>
       </node>
-      <node id="player102" label="player102">
+      <node id="team210" label="Lakers">
         <attvalues>
-          <attvalue for="1" value="33" />
-          <attvalue for="0" value="LaMarcus Aldridge" />
+          <attvalue for="name" value="Lakers"/>
+          <attvalue for="modularityClass" value="4"/>
+          <attvalue for="pagerank" value="0.015917504267891555"/>
+          <attvalue for="rawSize" value="4.286248587969949"/>
         </attvalues>
+        <viz:color r="239" g="246" b="195"/>
+        <viz:size value="4.286248587969949"/>
+        <viz:position x="22.944637298583984" y="43.60745620727539"/>
       </node>
-      <node id="player107" label="player107">
+      <node id="team212" label="Grizzlies">
         <attvalues>
-          <attvalue for="1" value="32" />
-          <attvalue for="0" value="Aron Baynes" />
+          <attvalue for="name" value="Grizzlies"/>
+          <attvalue for="modularityClass" value="4"/>
+          <attvalue for="pagerank" value="0.009181580650982558"/>
+          <attvalue for="rawSize" value="3.1660900545781314"/>
         </attvalues>
+        <viz:color r="239" g="246" b="195"/>
+        <viz:size value="3.1660900545781314"/>
+        <viz:position x="-5.9320549964904785" y="65.71076965332031"/>
       </node>
-      <node id="player108" label="player108">
+      <node id="player100" label="Tim Duncan">
         <attvalues>
-          <attvalue for="1" value="36" />
-          <attvalue for="0" value="Boris Diaw" />
+          <attvalue for="name" value="Tim Duncan"/>
+          <attvalue for="age" value="42"/>
+          <attvalue for="modularityClass" value="6"/>
+          <attvalue for="pagerank" value="0.01955293003822666"/>
+          <attvalue for="rawSize" value="4.705032052671206"/>
         </attvalues>
+        <viz:color r="176" g="209" b="211"/>
+        <viz:size value="4.705032052671206"/>
+        <viz:position x="0.019950218498706818" y="-14.939311981201172"/>
       </node>
-      <node id="player109" label="player109">
+      <node id="addr_4">
         <attvalues>
-          <attvalue for="1" value="34" />
-          <attvalue for="0" value="Tiago Splitter" />
+          <attvalue for="modularityClass" value="6"/>
+          <attvalue for="pagerank" value="0.011232395890328113"/>
+          <attvalue for="rawSize" value="3.57652041931024"/>
+          <attvalue for="geo_point" value="POINT(Point(&#xA;    coord=Coordinate(&#xA;        x=7.0,&#xA;        y=8.0)))"/>
+          <attvalue for="address" value="1 Payne Circle Mitchellfort  LA 73053"/>
         </attvalues>
+        <viz:color r="176" g="209" b="211"/>
+        <viz:size value="3.57652041931024"/>
+        <viz:position x="-15.724903106689453" y="-49.80425262451172"/>
       </node>
-      <node id="player144" label="player144">
+      <node id="player101" label="Tony Parker">
         <attvalues>
-          <attvalue for="1" value="47" />
-          <attvalue for="0" value="Shaquille O'Neal" />
+          <attvalue for="name" value="Tony Parker"/>
+          <attvalue for="age" value="36"/>
+          <attvalue for="modularityClass" value="6"/>
+          <attvalue for="pagerank" value="0.013963036698073578"/>
+          <attvalue for="rawSize" value="4.019542077321667"/>
         </attvalues>
+        <viz:color r="176" g="209" b="211"/>
+        <viz:size value="4.019542077321667"/>
+        <viz:position x="-12.26912784576416" y="-13.787120819091797"/>
       </node>
-      <node id="player103" label="player103">
+      <node id="player125" label="Manu Ginobili">
         <attvalues>
-          <attvalue for="1" value="32" />
-          <attvalue for="0" value="Rudy Gay" />
+          <attvalue for="name" value="Manu Ginobili"/>
+          <attvalue for="age" value="41"/>
+          <attvalue for="modularityClass" value="6"/>
+          <attvalue for="pagerank" value="0.01405834510576038"/>
+          <attvalue for="rawSize" value="4.033391014157305"/>
         </attvalues>
+        <viz:color r="176" g="209" b="211"/>
+        <viz:size value="4.033391014157305"/>
+        <viz:position x="-3.5960400104522705" y="-25.813215255737305"/>
       </node>
-      <node id="player110" label="player110">
+      <node id="post11">
         <attvalues>
-          <attvalue for="1" value="27" />
-          <attvalue for="0" value="Cory Joseph" />
+          <attvalue for="modularityClass" value="6"/>
+          <attvalue for="pagerank" value="0.016950592495447486"/>
+          <attvalue for="rawSize" value="4.4142689431761815"/>
+          <attvalue for="title" value="Let's have a party!"/>
         </attvalues>
+        <viz:color r="176" g="209" b="211"/>
+        <viz:size value="4.4142689431761815"/>
+        <viz:position x="-14.548062324523926" y="-23.184953689575195"/>
       </node>
-      <node id="player111" label="player111">
+      <node id="player102" label="LaMarcus Aldridge">
         <attvalues>
-          <attvalue for="1" value="38" />
-          <attvalue for="0" value="David West" />
+          <attvalue for="name" value="LaMarcus Aldridge"/>
+          <attvalue for="age" value="33"/>
+          <attvalue for="modularityClass" value="5"/>
+          <attvalue for="pagerank" value="0.013517590923777573"/>
+          <attvalue for="rawSize" value="3.9535366981300095"/>
         </attvalues>
+        <viz:color r="208" g="228" b="203"/>
+        <viz:size value="3.9535366981300095"/>
+        <viz:position x="17.033329010009766" y="-22.011600494384766"/>
       </node>
-      <node id="player112" label="player112">
+      <node id="player104" label="Marco Belinelli">
         <attvalues>
-          <attvalue for="1" value="29" />
-          <attvalue for="0" value="Jonathon Simmons" />
+          <attvalue for="name" value="Marco Belinelli"/>
+          <attvalue for="age" value="32"/>
+          <attvalue for="modularityClass" value="7"/>
+          <attvalue for="pagerank" value="0.00974330371895766"/>
+          <attvalue for="rawSize" value="3.286979867399679"/>
         </attvalues>
+        <viz:color r="145" g="191" b="219"/>
+        <viz:size value="3.286979867399679"/>
+        <viz:position x="-11.307615280151367" y="4.92859411239624"/>
       </node>
-      <node id="player114" label="player114">
+      <node id="player105" label="Danny Green">
         <attvalues>
-          <attvalue for="1" value="39" />
-          <attvalue for="0" value="Tracy McGrady" />
+          <attvalue for="name" value="Danny Green"/>
+          <attvalue for="age" value="31"/>
+          <attvalue for="modularityClass" value="7"/>
+          <attvalue for="pagerank" value="0.009428991847523844"/>
+          <attvalue for="rawSize" value="3.220222581030481"/>
         </attvalues>
+        <viz:color r="145" g="191" b="219"/>
+        <viz:size value="3.220222581030481"/>
+        <viz:position x="2.5027928352355957" y="12.062361717224121"/>
       </node>
-      <node id="player138" label="player138">
+      <node id="player107" label="Aron Baynes">
         <attvalues>
-          <attvalue for="1" value="38" />
-          <attvalue for="0" value="Paul Gasol" />
+          <attvalue for="name" value="Aron Baynes"/>
+          <attvalue for="age" value="32"/>
+          <attvalue for="modularityClass" value="5"/>
+          <attvalue for="pagerank" value="0.008462259452362099"/>
+          <attvalue for="rawSize" value="3"/>
         </attvalues>
+        <viz:color r="208" g="228" b="203"/>
+        <viz:size value="3"/>
+        <viz:position x="35.208309173583984" y="1.6689876317977905"/>
       </node>
-      <node id="team200" label="team200">
+      <node id="player108" label="Boris Diaw">
         <attvalues>
-          <attvalue for="0" value="Warriors" />
+          <attvalue for="name" value="Boris Diaw"/>
+          <attvalue for="age" value="36"/>
+          <attvalue for="modularityClass" value="6"/>
+          <attvalue for="pagerank" value="0.008462259452362099"/>
+          <attvalue for="rawSize" value="3"/>
         </attvalues>
+        <viz:color r="176" g="209" b="211"/>
+        <viz:size value="3"/>
+        <viz:position x="-26.174474716186523" y="7.220093727111816"/>
       </node>
-      <node id="team208" label="team208">
+      <node id="player109" label="Tiago Splitter">
         <attvalues>
-          <attvalue for="0" value="Kings" />
+          <attvalue for="name" value="Tiago Splitter"/>
+          <attvalue for="age" value="34"/>
+          <attvalue for="modularityClass" value="6"/>
+          <attvalue for="pagerank" value="0.008462259452362099"/>
+          <attvalue for="rawSize" value="3"/>
         </attvalues>
+        <viz:color r="176" g="209" b="211"/>
+        <viz:size value="3"/>
+        <viz:position x="13.999004364013672" y="-11.392906188964844"/>
       </node>
-      <node id="team218" label="team218">
+      <node id="player113" label="Dejounte Murray">
         <attvalues>
-          <attvalue for="0" value="Raptors" />
+          <attvalue for="name" value="Dejounte Murray"/>
+          <attvalue for="age" value="29"/>
+          <attvalue for="modularityClass" value="6"/>
+          <attvalue for="pagerank" value="0.008462259452362099"/>
+          <attvalue for="rawSize" value="3"/>
         </attvalues>
+        <viz:color r="176" g="209" b="211"/>
+        <viz:size value="3"/>
+        <viz:position x="-22.600208282470703" y="-11.61722469329834"/>
       </node>
-      <node id="team221" label="team221">
+      <node id="player144" label="Shaquille O'Neal">
         <attvalues>
-          <attvalue for="0" value="Bulls" />
+          <attvalue for="name" value="Shaquille O'Neal"/>
+          <attvalue for="age" value="47"/>
+          <attvalue for="modularityClass" value="1"/>
+          <attvalue for="pagerank" value="0.010859996781096963"/>
+          <attvalue for="rawSize" value="3.507879970951785"/>
         </attvalues>
+        <viz:color r="253" g="174" b="118"/>
+        <viz:size value="3.507879970951785"/>
+        <viz:position x="26.856550216674805" y="35.2096061706543"/>
       </node>
-      <node id="team222" label="team222">
+      <node id="post7">
         <attvalues>
-          <attvalue for="0" value="Hawks" />
+          <attvalue for="modularityClass" value="5"/>
+          <attvalue for="pagerank" value="0.016091008456801562"/>
+          <attvalue for="rawSize" value="4.308319578091483"/>
+          <attvalue for="title" value="my best friend, jerry"/>
         </attvalues>
+        <viz:color r="208" g="228" b="203"/>
+        <viz:size value="4.308319578091483"/>
+        <viz:position x="30.508209228515625" y="-28.745086669921875"/>
       </node>
-      <node id="team217" label="team217">
+      <node id="player103" label="Rudy Gay">
         <attvalues>
-          <attvalue for="0" value="Celtics" />
+          <attvalue for="name" value="Rudy Gay"/>
+          <attvalue for="age" value="32"/>
+          <attvalue for="modularityClass" value="1"/>
+          <attvalue for="pagerank" value="0.011024868288809593"/>
+          <attvalue for="rawSize" value="3.538554863205961"/>
         </attvalues>
+        <viz:color r="253" g="174" b="118"/>
+        <viz:size value="3.538554863205961"/>
+        <viz:position x="12.922471046447754" y="11.112709999084473"/>
       </node>
-      <node id="team224" label="team224">
+      <node id="player111" label="David West">
         <attvalues>
-          <attvalue for="0" value="Pistons" />
+          <attvalue for="name" value="David West"/>
+          <attvalue for="age" value="38"/>
+          <attvalue for="modularityClass" value="2"/>
+          <attvalue for="pagerank" value="0.008462259452362099"/>
+          <attvalue for="rawSize" value="3"/>
         </attvalues>
+        <viz:color r="254" g="206" b="147"/>
+        <viz:size value="3"/>
+        <viz:position x="12.160057067871094" y="-29.521677017211914"/>
       </node>
-      <node id="team203" label="team203">
+      <node id="player130" label="Joel Embiid">
         <attvalues>
-          <attvalue for="0" value="Trail Blazers" />
+          <attvalue for="name" value="Joel Embiid"/>
+          <attvalue for="age" value="25"/>
+          <attvalue for="modularityClass" value="3"/>
+          <attvalue for="pagerank" value="0.008462259452362099"/>
+          <attvalue for="rawSize" value="3"/>
         </attvalues>
+        <viz:color r="255" g="239" b="176"/>
+        <viz:size value="3"/>
+        <viz:position x="39.86814498901367" y="-4.737550258636475"/>
       </node>
-      <node id="player135" label="player135">
+      <node id="addr_0">
         <attvalues>
-          <attvalue for="1" value="28" />
-          <attvalue for="0" value="Damian Lillard" />
+          <attvalue for="modularityClass" value="7"/>
+          <attvalue for="pagerank" value="0.008949444381776871"/>
+          <attvalue for="rawSize" value="3.113956484238033"/>
+          <attvalue for="geo_point" value="POINT(Point(&#xA;    coord=Coordinate(&#xA;        x=1.0,&#xA;        y=2.0)))"/>
+          <attvalue for="address" value="Brittany Forge Apt. 718 East Eric  WV 97881"/>
         </attvalues>
+        <viz:color r="145" g="191" b="219"/>
+        <viz:size value="3.113956484238033"/>
+        <viz:position x="-26.3395938873291" y="18.096792221069336"/>
       </node>
-      <node id="player119" label="player119">
+      <node id="post6">
         <attvalues>
-          <attvalue for="1" value="30" />
-          <attvalue for="0" value="Kevin Durant" />
+          <attvalue for="modularityClass" value="0"/>
+          <attvalue for="pagerank" value="0.011483058304271085"/>
+          <attvalue for="rawSize" value="3.6214527053563597"/>
+          <attvalue for="title" value="my best friend, tom"/>
         </attvalues>
+        <viz:color r="252" g="141" b="89"/>
+        <viz:size value="3.6214527053563597"/>
+        <viz:position x="-39.377471923828125" y="4.5490617752075195"/>
       </node>
-      <node id="player120" label="player120">
+      <node id="post4">
         <attvalues>
-          <attvalue for="1" value="29" />
-          <attvalue for="0" value="James Harden" />
+          <attvalue for="modularityClass" value="1"/>
+          <attvalue for="pagerank" value="0.015030482619036218"/>
+          <attvalue for="rawSize" value="4.169515526834572"/>
+          <attvalue for="title" value="I love you, Dad"/>
         </attvalues>
+        <viz:color r="253" g="174" b="118"/>
+        <viz:size value="4.169515526834572"/>
+        <viz:position x="8.984853744506836" y="22.76841926574707"/>
       </node>
-      <node id="team216" label="team216">
+      <node id="team208" label="Kings">
         <attvalues>
-          <attvalue for="0" value="Cavaliers" />
+          <attvalue for="name" value="Kings"/>
+          <attvalue for="modularityClass" value="1"/>
+          <attvalue for="pagerank" value="0.01028823848708713"/>
+          <attvalue for="rawSize" value="3.397772375060649"/>
         </attvalues>
+        <viz:color r="253" g="174" b="118"/>
+        <viz:size value="3.397772375060649"/>
+        <viz:position x="-2.9869842529296875" y="19.012290954589844"/>
       </node>
-      <node id="team206" label="team206">
+      <node id="team218" label="Raptors">
         <attvalues>
-          <attvalue for="0" value="Jazz" />
+          <attvalue for="name" value="Raptors"/>
+          <attvalue for="modularityClass" value="7"/>
+          <attvalue for="pagerank" value="0.016050081453118075"/>
+          <attvalue for="rawSize" value="4.3031348894681765"/>
         </attvalues>
+        <viz:color r="145" g="191" b="219"/>
+        <viz:size value="4.3031348894681765"/>
+        <viz:position x="0.5209251642227173" y="27.420368194580078"/>
       </node>
-      <node id="player145" label="player145">
+      <node id="team219" label="76ers">
         <attvalues>
-          <attvalue for="1" value="31" />
-          <attvalue for="0" value="JaVale McGee" />
+          <attvalue for="name" value="76ers"/>
+          <attvalue for="modularityClass" value="3"/>
+          <attvalue for="pagerank" value="0.015971389415928974"/>
+          <attvalue for="rawSize" value="4.293128820789832"/>
         </attvalues>
+        <viz:color r="255" g="239" b="176"/>
+        <viz:size value="4.293128820789832"/>
+        <viz:position x="22.58404541015625" y="4.2504353523254395"/>
       </node>
-      <node id="team226" label="team226">
+      <node id="team221" label="Bulls">
         <attvalues>
-          <attvalue for="0" value="Magic" />
+          <attvalue for="name" value="Bulls"/>
+          <attvalue for="modularityClass" value="4"/>
+          <attvalue for="pagerank" value="0.00966876558039733"/>
+          <attvalue for="rawSize" value="3.271345441524603"/>
         </attvalues>
+        <viz:color r="239" g="246" b="195"/>
+        <viz:size value="3.271345441524603"/>
+        <viz:position x="-14.434226989746094" y="36.43449020385742"/>
       </node>
-      <node id="team229" label="team229">
+      <node id="team222" label="Hawks">
         <attvalues>
-          <attvalue for="0" value="Heat" />
+          <attvalue for="name" value="Hawks"/>
+          <attvalue for="modularityClass" value="6"/>
+          <attvalue for="pagerank" value="0.010696367292712273"/>
+          <attvalue for="rawSize" value="3.476972213351643"/>
         </attvalues>
+        <viz:color r="176" g="209" b="211"/>
+        <viz:size value="3.476972213351643"/>
+        <viz:position x="-18.404430389404297" y="9.28033447265625"/>
       </node>
-      <node id="player133" label="player133">
+      <node id="team215" label="Hornets">
         <attvalues>
-          <attvalue for="1" value="38" />
-          <attvalue for="0" value="Yao Ming" />
+          <attvalue for="name" value="Hornets"/>
+          <attvalue for="modularityClass" value="7"/>
+          <attvalue for="pagerank" value="0.016713813828164694"/>
+          <attvalue for="rawSize" value="4.385630337683884"/>
         </attvalues>
+        <viz:color r="145" g="191" b="219"/>
+        <viz:size value="4.385630337683884"/>
+        <viz:position x="29.183840801714105" y="7.937843974713147"/>
+      </node>
+      <node id="addr_5">
+        <attvalues>
+          <attvalue for="modularityClass" value="7"/>
+          <attvalue for="pagerank" value="0.009263756253210688"/>
+          <attvalue for="rawSize" value="3.1842298452139732"/>
+          <attvalue for="geo_point" value="POINT(Point(&#xA;    coord=Coordinate(&#xA;        x=9.0,&#xA;        y=10.0)))"/>
+          <attvalue for="address" value="2 Klein Mission New Annetteton  HI 05775"/>
+        </attvalues>
+        <viz:color r="145" g="191" b="219"/>
+        <viz:size value="3.1842298452139732"/>
+        <viz:position x="-5.146261215209961" y="25.60578155517578"/>
+      </node>
+      <node id="player116" label="LeBron James">
+        <attvalues>
+          <attvalue for="name" value="LeBron James"/>
+          <attvalue for="age" value="34"/>
+          <attvalue for="modularityClass" value="7"/>
+          <attvalue for="pagerank" value="0.013543724602698983"/>
+          <attvalue for="rawSize" value="3.9574688010303696"/>
+        </attvalues>
+        <viz:color r="145" g="191" b="219"/>
+        <viz:size value="3.9574688010303696"/>
+        <viz:position x="23.294219970703125" y="20.995195388793945"/>
+      </node>
+      <node id="post5">
+        <attvalues>
+          <attvalue for="modularityClass" value="2"/>
+          <attvalue for="pagerank" value="0.012996713150562006"/>
+          <attvalue for="rawSize" value="3.8735376968254664"/>
+          <attvalue for="title" value="I hate coriander"/>
+        </attvalues>
+        <viz:color r="254" g="206" b="147"/>
+        <viz:size value="3.8735376968254664"/>
+        <viz:position x="27.827909469604492" y="4.043013095855713"/>
+      </node>
+      <node id="team216" label="Cavaliers">
+        <attvalues>
+          <attvalue for="name" value="Cavaliers"/>
+          <attvalue for="modularityClass" value="7"/>
+          <attvalue for="pagerank" value="0.01489451495716778"/>
+          <attvalue for="rawSize" value="4.151015277245034"/>
+        </attvalues>
+        <viz:color r="145" g="191" b="219"/>
+        <viz:size value="4.151015277245034"/>
+        <viz:position x="26.200210571289062" y="27.141931533813477"/>
+      </node>
+      <node id="addr_8">
+        <attvalues>
+          <attvalue for="modularityClass" value="6"/>
+          <attvalue for="pagerank" value="0.009181580650982558"/>
+          <attvalue for="rawSize" value="3.1660900545781314"/>
+          <attvalue for="geo_point" value="POINT(Point(&#xA;    coord=Coordinate(&#xA;        x=15.0,&#xA;        y=16.0)))"/>
+          <attvalue for="address" value="11 Webb Groves Tiffanyside  MN 14566"/>
+        </attvalues>
+        <viz:color r="176" g="209" b="211"/>
+        <viz:size value="3.1660900545781314"/>
+        <viz:position x="-43.26424026489258" y="12.648438453674316"/>
+      </node>
+      <node id="team206" label="Jazz">
+        <attvalues>
+          <attvalue for="name" value="Jazz"/>
+          <attvalue for="modularityClass" value="6"/>
+          <attvalue for="pagerank" value="0.009181580650982558"/>
+          <attvalue for="rawSize" value="3.1660900545781314"/>
+        </attvalues>
+        <viz:color r="176" g="209" b="211"/>
+        <viz:size value="3.1660900545781314"/>
+        <viz:position x="-41.675636291503906" y="15.642728805541992"/>
+      </node>
+      <node id="addr_9">
+        <attvalues>
+          <attvalue for="modularityClass" value="6"/>
+          <attvalue for="pagerank" value="0.009489861164677042"/>
+          <attvalue for="rawSize" value="3.233322789860012"/>
+          <attvalue for="geo_point" value="POINT(Point(&#xA;    coord=Coordinate(&#xA;        x=17.0,&#xA;        y=18.0)))"/>
+          <attvalue for="address" value="70 Robinson Locks Suite 113 East Veronica  ND 87845"/>
+        </attvalues>
+        <viz:color r="176" g="209" b="211"/>
+        <viz:size value="3.233322789860012"/>
+        <viz:position x="31.138484954833984" y="-19.917112350463867"/>
+      </node>
+      <node id="addr_13">
+        <attvalues>
+          <attvalue for="modularityClass" value="6"/>
+          <attvalue for="pagerank" value="0.008941806918109071"/>
+          <attvalue for="rawSize" value="3.112218357016505"/>
+          <attvalue for="geo_point" value="POINT(Point(&#xA;    coord=Coordinate(&#xA;        x=120.12,&#xA;        y=30.16)))"/>
+          <attvalue for="address" value="1 Southport Street Apt. 098 Westport  KY 85907"/>
+        </attvalues>
+        <viz:color r="176" g="209" b="211"/>
+        <viz:size value="3.112218357016505"/>
+        <viz:position x="-38.634605407714844" y="-22.67226791381836"/>
+      </node>
+      <node id="player106" label="Kyle Anderson">
+        <attvalues>
+          <attvalue for="name" value="Kyle Anderson"/>
+          <attvalue for="age" value="25"/>
+          <attvalue for="modularityClass" value="0"/>
+          <attvalue for="pagerank" value="0.008941806918109071"/>
+          <attvalue for="rawSize" value="3.112218357016505"/>
+        </attvalues>
+        <viz:color r="252" g="141" b="89"/>
+        <viz:size value="3.112218357016505"/>
+        <viz:position x="-39.09077835083008" y="-1.7336839437484741"/>
+      </node>
+      <node id="player118" label="Russell Westbrook">
+        <attvalues>
+          <attvalue for="name" value="Russell Westbrook"/>
+          <attvalue for="age" value="30"/>
+          <attvalue for="modularityClass" value="0"/>
+          <attvalue for="pagerank" value="0.025871641480524194"/>
+          <attvalue for="rawSize" value="5.275111928049666"/>
+        </attvalues>
+        <viz:color r="252" g="141" b="89"/>
+        <viz:size value="5.275111928049666"/>
+        <viz:position x="-55.89387893676758" y="-12.59813117980957"/>
+      </node>
+      <node id="player119" label="Kevin Durant">
+        <attvalues>
+          <attvalue for="name" value="Kevin Durant"/>
+          <attvalue for="age" value="30"/>
+          <attvalue for="modularityClass" value="2"/>
+          <attvalue for="pagerank" value="0.008941806918109071"/>
+          <attvalue for="rawSize" value="3.112218357016505"/>
+        </attvalues>
+        <viz:color r="254" g="206" b="147"/>
+        <viz:size value="3.112218357016505"/>
+        <viz:position x="-4.647974967956543" y="-38.65753173828125"/>
+      </node>
+      <node id="player120" label="James Harden">
+        <attvalues>
+          <attvalue for="name" value="James Harden"/>
+          <attvalue for="age" value="29"/>
+          <attvalue for="modularityClass" value="0"/>
+          <attvalue for="pagerank" value="0.019934651909363114"/>
+          <attvalue for="rawSize" value="4.74439368731645"/>
+        </attvalues>
+        <viz:color r="252" g="141" b="89"/>
+        <viz:size value="4.74439368731645"/>
+        <viz:position x="-53.66625213623047" y="-17.170921325683594"/>
+      </node>
+      <node id="player121" label="Chris Paul">
+        <attvalues>
+          <attvalue for="name" value="Chris Paul"/>
+          <attvalue for="age" value="33"/>
+          <attvalue for="modularityClass" value="7"/>
+          <attvalue for="pagerank" value="0.008941806918109071"/>
+          <attvalue for="rawSize" value="3.112218357016505"/>
+        </attvalues>
+        <viz:color r="145" g="191" b="219"/>
+        <viz:size value="3.112218357016505"/>
+        <viz:position x="-11.694414138793945" y="14.146332740783691"/>
+      </node>
+      <node id="post3">
+        <attvalues>
+          <attvalue for="modularityClass" value="6"/>
+          <attvalue for="pagerank" value="0.011599401060789681"/>
+          <attvalue for="rawSize" value="3.6419753838176323"/>
+          <attvalue for="title" value="I can swim"/>
+        </attvalues>
+        <viz:color r="176" g="209" b="211"/>
+        <viz:size value="3.6419753838176323"/>
+        <viz:position x="-16.58074378967285" y="-5.836202144622803"/>
+      </node>
+      <node id="player110" label="Cory Joseph">
+        <attvalues>
+          <attvalue for="name" value="Cory Joseph"/>
+          <attvalue for="age" value="27"/>
+          <attvalue for="modularityClass" value="4"/>
+          <attvalue for="pagerank" value="0.008462259452362099"/>
+          <attvalue for="rawSize" value="3"/>
+        </attvalues>
+        <viz:color r="239" g="246" b="195"/>
+        <viz:size value="3"/>
+        <viz:position x="-7.579489231109619" y="32.50056838989258"/>
+      </node>
+      <node id="player112" label="Jonathon Simmons">
+        <attvalues>
+          <attvalue for="name" value="Jonathon Simmons"/>
+          <attvalue for="age" value="29"/>
+          <attvalue for="modularityClass" value="3"/>
+          <attvalue for="pagerank" value="0.008462259452362099"/>
+          <attvalue for="rawSize" value="3"/>
+        </attvalues>
+        <viz:color r="255" g="239" b="176"/>
+        <viz:size value="3"/>
+        <viz:position x="17.338102340698242" y="25.786603927612305"/>
+      </node>
+      <node id="LA" label="Louisiana">
+        <attvalues>
+          <attvalue for="name" value="Louisiana"/>
+          <attvalue for="modularityClass" value="6"/>
+          <attvalue for="pagerank" value="0.026324572458331308"/>
+          <attvalue for="rawSize" value="5.31044464357289"/>
+          <attvalue for="geo_point" value="POINT(Point(&#xA;    coord=Coordinate(&#xA;        x=7.0,&#xA;        y=8.1)))"/>
+        </attvalues>
+        <viz:color r="176" g="209" b="211"/>
+        <viz:size value="5.31044464357289"/>
+        <viz:position x="-24.509859085083008" y="-59.55903625488281"/>
+      </node>
+      <node id="addr_7">
+        <attvalues>
+          <attvalue for="modularityClass" value="6"/>
+          <attvalue for="pagerank" value="0.00978105948973245"/>
+          <attvalue for="rawSize" value="3.294853589769696"/>
+          <attvalue for="geo_point" value="POINT(Point(&#xA;    coord=Coordinate(&#xA;        x=13.0,&#xA;        y=14.0)))"/>
+          <attvalue for="address" value="John Garden Port John  LA 54602"/>
+        </attvalues>
+        <viz:color r="176" g="209" b="211"/>
+        <viz:size value="3.294853589769696"/>
+        <viz:position x="-24.61280059814453" y="-47.807308197021484"/>
+      </node>
+      <node id="addr_2">
+        <attvalues>
+          <attvalue for="modularityClass" value="5"/>
+          <attvalue for="pagerank" value="0.00950684666632536"/>
+          <attvalue for="rawSize" value="3.236963392198243"/>
+          <attvalue for="geo_point" value="POINT(Point(&#xA;    coord=Coordinate(&#xA;        x=13.13,&#xA;        y=-87.65)))"/>
+          <attvalue for="address" value="Schmidt Key Lake Charles  AL 36174"/>
+        </attvalues>
+        <viz:color r="208" g="228" b="203"/>
+        <viz:size value="3.236963392198243"/>
+        <viz:position x="26.463890075683594" y="-37.81310272216797"/>
+      </node>
+      <node id="player135" label="Damian Lillard">
+        <attvalues>
+          <attvalue for="name" value="Damian Lillard"/>
+          <attvalue for="age" value="28"/>
+          <attvalue for="modularityClass" value="5"/>
+          <attvalue for="pagerank" value="0.008462259452362099"/>
+          <attvalue for="rawSize" value="3"/>
+        </attvalues>
+        <viz:color r="208" g="228" b="203"/>
+        <viz:size value="3"/>
+        <viz:position x="34.978294372558594" y="-36.68817901611328"/>
+      </node>
+      <node id="team203" label="Trail Blazers">
+        <attvalues>
+          <attvalue for="name" value="Trail Blazers"/>
+          <attvalue for="modularityClass" value="5"/>
+          <attvalue for="pagerank" value="0.011904583995060225"/>
+          <attvalue for="rawSize" value="3.694846227845738"/>
+        </attvalues>
+        <viz:color r="208" g="228" b="203"/>
+        <viz:size value="3.694846227845738"/>
+        <viz:position x="33.84772491455078" y="-40.3774299621582"/>
+      </node>
+      <node id="addr_1">
+        <attvalues>
+          <attvalue for="modularityClass" value="5"/>
+          <attvalue for="pagerank" value="0.00966112811672953"/>
+          <attvalue for="rawSize" value="3.269736675789617"/>
+          <attvalue for="geo_point" value="POINT(Point(&#xA;    coord=Coordinate(&#xA;        x=3.0,&#xA;        y=4.0)))"/>
+          <attvalue for="address" value="Richard Curve Kingstad  AZ 05660"/>
+        </attvalues>
+        <viz:color r="208" g="228" b="203"/>
+        <viz:size value="3.269736675789617"/>
+        <viz:position x="51.821258544921875" y="-1.3649897575378418"/>
+      </node>
+      <node id="player145" label="JaVale McGee">
+        <attvalues>
+          <attvalue for="name" value="JaVale McGee"/>
+          <attvalue for="age" value="31"/>
+          <attvalue for="modularityClass" value="2"/>
+          <attvalue for="pagerank" value="0.009487966218205971"/>
+          <attvalue for="rawSize" value="3.232916230888327"/>
+        </attvalues>
+        <viz:color r="254" g="206" b="147"/>
+        <viz:size value="3.232916230888327"/>
+        <viz:position x="33.61149597167969" y="18.981666564941406"/>
+      </node>
+      <node id="player133" label="Yao Ming">
+        <attvalues>
+          <attvalue for="name" value="Yao Ming"/>
+          <attvalue for="age" value="38"/>
+          <attvalue for="modularityClass" value="1"/>
+          <attvalue for="pagerank" value="0.008462259452362099"/>
+          <attvalue for="rawSize" value="3"/>
+        </attvalues>
+        <viz:color r="253" g="174" b="118"/>
+        <viz:size value="3"/>
+        <viz:position x="18.559131622314453" y="40.31066131591797"/>
       </node>
     </nodes>
     <edges>
-      <edge source="player130" target="player149" id="0">
+      <edge id="0" source="player148" target="player127" weight="1" label="follow">
         <attvalues>
-          <attvalue for="2" value="80" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="80"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player130" target="team219" id="1">
+      <edge id="1" source="player148" target="player136" weight="1" label="follow">
         <attvalues>
-          <attvalue for="5" value="2014" />
-          <attvalue for="6" value="2019" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="90"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player128" target="player116" id="2">
+      <edge id="2" source="player148" target="player137" weight="1" label="follow">
         <attvalues>
-          <attvalue for="2" value="90" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="85"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player128" target="player121" id="3">
+      <edge id="3" source="player148" target="post8" weight="1" label="commented_at">
         <attvalues>
-          <attvalue for="2" value="90" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1546648206"/>
         </attvalues>
+        <viz:color r="63" g="173" b="175"/>
       </edge>
-      <edge source="player128" target="player129" id="4">
+      <edge id="4" source="player148" target="team214" weight="1" label="serve">
         <attvalues>
-          <attvalue for="2" value="90" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="1996"/>
+          <attvalue for="end_year" value="2001"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player128" target="team201" id="5">
+      <edge id="5" source="player148" target="team223" weight="1" label="serve">
         <attvalues>
-          <attvalue for="5" value="2003" />
-          <attvalue for="6" value="2011" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2012"/>
+          <attvalue for="end_year" value="2013"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player128" target="team202" id="6">
+      <edge id="6" source="player148" target="team227" weight="1" label="serve">
         <attvalues>
-          <attvalue for="5" value="2018" />
-          <attvalue for="6" value="2019" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2001"/>
+          <attvalue for="end_year" value="2008"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player128" target="team205" id="7">
+      <edge id="7" source="player148" target="team213" weight="1" label="serve">
         <attvalues>
-          <attvalue for="5" value="2017" />
-          <attvalue for="6" value="2018" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="1994"/>
+          <attvalue for="end_year" value="1996"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player128" target="team223" id="8">
+      <edge id="8" source="player148" target="team213" weight="1" label="serve">
         <attvalues>
-          <attvalue for="5" value="2011" />
-          <attvalue for="6" value="2017" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="1"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2008"/>
+          <attvalue for="end_year" value="2012"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player116" target="team210" id="9">
+      <edge id="9" source="player142" target="player117" weight="1" label="follow">
         <attvalues>
-          <attvalue for="6" value="2019" />
-          <attvalue for="5" value="2018" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="90"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player116" target="team229" id="10">
+      <edge id="10" source="player142" target="post2" weight="1" label="commented_at">
         <attvalues>
-          <attvalue for="6" value="2014" />
-          <attvalue for="5" value="2010" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1480068290"/>
         </attvalues>
+        <viz:color r="63" g="173" b="175"/>
       </edge>
-      <edge source="player116" target="team216" id="11">
+      <edge id="11" source="player142" target="team200" weight="1" label="serve">
         <attvalues>
-          <attvalue for="6" value="2010" />
-          <attvalue for="5" value="2003" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2011"/>
+          <attvalue for="end_year" value="2019"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player116" target="team216" id="12">
+      <edge id="12" source="player141" target="player124" weight="1" label="follow">
         <attvalues>
-          <attvalue for="6" value="2018" />
-          <attvalue for="5" value="2014" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="1" />
+          <attvalue for="degree" value="9"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player121" target="player116" id="13">
+      <edge id="13" source="player141" target="post1" weight="1" label="commented_at">
         <attvalues>
-          <attvalue for="2" value="90" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1546562046"/>
         </attvalues>
+        <viz:color r="63" g="173" b="175"/>
       </edge>
-      <edge source="player121" target="player116" id="14">
+      <edge id="14" source="player141" target="post1" weight="1" label="commented_at">
         <attvalues>
-          <attvalue for="2" value="90" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="1" />
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="1"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1546562046"/>
         </attvalues>
+        <viz:color r="63" g="173" b="175"/>
       </edge>
-      <edge source="player121" target="player128" id="15">
+      <edge id="15" source="player141" target="team205" weight="1" label="serve">
         <attvalues>
-          <attvalue for="2" value="90" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2003"/>
+          <attvalue for="end_year" value="2007"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player121" target="player129" id="16">
+      <edge id="16" source="player141" target="team217" weight="1" label="serve">
         <attvalues>
-          <attvalue for="2" value="90" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2007"/>
+          <attvalue for="end_year" value="2012"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player121" target="team202" id="17">
+      <edge id="17" source="player141" target="team217" weight="1" label="serve">
         <attvalues>
-          <attvalue for="5" value="2017" />
-          <attvalue for="6" value="2021" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="1"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2007"/>
+          <attvalue for="end_year" value="2012"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player121" target="team207" id="18">
+      <edge id="18" source="player141" target="team225" weight="1" label="serve">
         <attvalues>
-          <attvalue for="5" value="2011" />
-          <attvalue for="6" value="2017" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="1996"/>
+          <attvalue for="end_year" value="2003"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player121" target="team215" id="19">
+      <edge id="19" source="player141" target="team229" weight="1.3333333333333333" label="serve">
         <attvalues>
-          <attvalue for="5" value="2005" />
-          <attvalue for="6" value="2011" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="start_year" value="2012"/>
+          <attvalue for="end_year" value="2014"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player121" target="team215" id="20">
+      <edge id="20" source="player141" target="team229" weight="1.3333333333333333" label="serve">
         <attvalues>
-          <attvalue for="6" value="2011" />
-          <attvalue for="5" value="2005" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="1" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="1"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="start_year" value="2012"/>
+          <attvalue for="end_year" value="2014"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player136" target="player117" id="21">
+      <edge id="21" source="player140" target="player114" weight="1.3333333333333333" label="follow">
         <attvalues>
-          <attvalue for="2" value="90" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="90"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player136" target="player137" id="22">
+      <edge id="22" source="player140" target="post10" weight="1" label="commented_at">
         <attvalues>
-          <attvalue for="2" value="88" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1294826490"/>
         </attvalues>
+        <viz:color r="63" g="173" b="175"/>
       </edge>
-      <edge source="player136" target="player147" id="23">
+      <edge id="23" source="player140" target="team207" weight="1" label="serve">
         <attvalues>
-          <attvalue for="2" value="90" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2012"/>
+          <attvalue for="end_year" value="2013"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player136" target="player148" id="24">
+      <edge id="24" source="player140" target="team214" weight="1" label="serve">
         <attvalues>
-          <attvalue for="2" value="85" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2007"/>
+          <attvalue for="end_year" value="2012"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player136" target="team210" id="25">
+      <edge id="25" source="player140" target="team224" weight="1" label="serve">
         <attvalues>
-          <attvalue for="5" value="2012" />
-          <attvalue for="6" value="2015" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="1994"/>
+          <attvalue for="end_year" value="2000"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player136" target="team213" id="26">
+      <edge id="26" source="player140" target="team226" weight="1.3333333333333333" label="serve">
         <attvalues>
-          <attvalue for="5" value="1998" />
-          <attvalue for="6" value="2004" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="start_year" value="2000"/>
+          <attvalue for="end_year" value="2007"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player136" target="team214" id="27">
+      <edge id="27" source="player114" target="team204" weight="1.3333333333333333" label="serve">
         <attvalues>
-          <attvalue for="5" value="1996" />
-          <attvalue for="6" value="1998" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="start_year" value="2013"/>
+          <attvalue for="end_year" value="2013"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player136" target="team214" id="28">
+      <edge id="28" source="player114" target="player103" weight="1.6666666666666665" label="follow">
         <attvalues>
-          <attvalue for="5" value="2004" />
-          <attvalue for="6" value="2012" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="1" />
+          <attvalue for="degree" value="90"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="2"/>
+          <attvalue for="rawWeight" value="1.6666666666666665"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player113" target="player100" id="29">
+      <edge id="29" source="player114" target="team218" weight="1.3333333333333333" label="serve">
         <attvalues>
-          <attvalue for="2" value="99" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="start_year" value="1997"/>
+          <attvalue for="end_year" value="2000"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player113" target="player100" id="30">
+      <edge id="30" source="player114" target="team226" weight="1.3333333333333333" label="serve">
         <attvalues>
-          <attvalue for="2" value="99" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="1" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="start_year" value="2000"/>
+          <attvalue for="end_year" value="2004"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player113" target="player101" id="31">
+      <edge id="31" source="player138" target="player115" weight="1" label="follow">
         <attvalues>
-          <attvalue for="2" value="99" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="90"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player113" target="player101" id="32">
+      <edge id="32" source="player138" target="player139" weight="1" label="follow">
         <attvalues>
-          <attvalue for="2" value="99" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="1" />
+          <attvalue for="degree" value="99"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player113" target="player104" id="33">
+      <edge id="33" source="player138" target="post10" weight="1" label="commented_at">
         <attvalues>
-          <attvalue for="2" value="99" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1294740030"/>
         </attvalues>
+        <viz:color r="63" g="173" b="175"/>
       </edge>
-      <edge source="player113" target="player104" id="34">
+      <edge id="34" source="player138" target="post10" weight="1" label="commented_at">
         <attvalues>
-          <attvalue for="2" value="99" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="1" />
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="1"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1294740030"/>
         </attvalues>
+        <viz:color r="63" g="173" b="175"/>
       </edge>
-      <edge source="player113" target="player105" id="35">
+      <edge id="35" source="player138" target="team204" weight="1" label="serve">
         <attvalues>
-          <attvalue for="2" value="99" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2016"/>
+          <attvalue for="end_year" value="2019"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player113" target="player105" id="36">
+      <edge id="36" source="player138" target="team204" weight="1" label="serve">
         <attvalues>
-          <attvalue for="2" value="99" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="1" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="1"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2016"/>
+          <attvalue for="end_year" value="2019"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player113" target="player106" id="37">
+      <edge id="37" source="player138" target="team210" weight="1" label="serve">
         <attvalues>
-          <attvalue for="2" value="99" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2008"/>
+          <attvalue for="end_year" value="2014"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player113" target="player106" id="38">
+      <edge id="38" source="player138" target="team210" weight="1" label="serve">
         <attvalues>
-          <attvalue for="2" value="99" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="1" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="1"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2008"/>
+          <attvalue for="end_year" value="2014"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player113" target="player116" id="39">
+      <edge id="39" source="player138" target="team212" weight="1" label="serve">
         <attvalues>
-          <attvalue for="2" value="99" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2001"/>
+          <attvalue for="end_year" value="2008"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player113" target="player116" id="40">
+      <edge id="40" source="player138" target="team221" weight="1" label="serve">
         <attvalues>
-          <attvalue for="2" value="99" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="1" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2014"/>
+          <attvalue for="end_year" value="2016"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player113" target="player118" id="41">
+      <edge id="41" source="player100" target="addr_4" weight="1" label="lived_in">
         <attvalues>
-          <attvalue for="2" value="99" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="lived_in"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
         </attvalues>
+        <viz:color r="137" g="112" b="199"/>
       </edge>
-      <edge source="player113" target="player118" id="42">
+      <edge id="42" source="player100" target="player101" weight="3" label="follow">
         <attvalues>
-          <attvalue for="2" value="99" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="1" />
+          <attvalue for="degree" value="95"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="6"/>
+          <attvalue for="rawWeight" value="3"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player113" target="player119" id="43">
+      <edge id="43" source="player100" target="player125" weight="2.6666666666666665" label="follow">
         <attvalues>
-          <attvalue for="2" value="99" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="95"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="5"/>
+          <attvalue for="rawWeight" value="2.6666666666666665"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player113" target="player120" id="44">
+      <edge id="44" source="player100" target="post1" weight="2" label="created_post">
         <attvalues>
-          <attvalue for="2" value="99" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="created_post"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="3"/>
+          <attvalue for="rawWeight" value="2"/>
+          <attvalue for="post_time" value="1546302606"/>
         </attvalues>
+        <viz:color r="199" g="90" b="143"/>
       </edge>
-      <edge source="player113" target="player121" id="45">
+      <edge id="45" source="player100" target="post11" weight="2.6666666666666665" label="created_post">
         <attvalues>
-          <attvalue for="2" value="99" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="created_post"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="5"/>
+          <attvalue for="rawWeight" value="2.6666666666666665"/>
+          <attvalue for="post_time" value="1635765030"/>
         </attvalues>
+        <viz:color r="199" g="90" b="143"/>
       </edge>
-      <edge source="player113" target="player125" id="46">
+      <edge id="46" source="player100" target="team204" weight="4" label="serve">
         <attvalues>
-          <attvalue for="2" value="99" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="9"/>
+          <attvalue for="rawWeight" value="4"/>
+          <attvalue for="start_year" value="1997"/>
+          <attvalue for="end_year" value="2016"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player113" target="team204" id="47">
+      <edge id="47" source="addr_4" target="LA" weight="1" label="belong_to">
         <attvalues>
-          <attvalue for="6" value="2019" />
-          <attvalue for="5" value="2016" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="belong_to"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
         </attvalues>
+        <viz:color r="182" g="148" b="66"/>
       </edge>
-      <edge source="player100" target="player101" id="48">
+      <edge id="48" source="player101" target="player100" weight="3" label="follow">
         <attvalues>
-          <attvalue for="2" value="95" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="95"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="6"/>
+          <attvalue for="rawWeight" value="3"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player100" target="player125" id="49">
+      <edge id="49" source="player101" target="addr_7" weight="1" label="lived_in">
         <attvalues>
-          <attvalue for="2" value="95" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="lived_in"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
         </attvalues>
+        <viz:color r="137" g="112" b="199"/>
       </edge>
-      <edge source="player100" target="team204" id="50">
+      <edge id="50" source="player101" target="player102" weight="1.6666666666666665" label="follow">
         <attvalues>
-          <attvalue for="6" value="2016" />
-          <attvalue for="5" value="1997" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="90"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="2"/>
+          <attvalue for="rawWeight" value="1.6666666666666665"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player101" target="player100" id="51">
+      <edge id="51" source="player101" target="player125" weight="2" label="follow">
         <attvalues>
-          <attvalue for="2" value="95" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="95"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="3"/>
+          <attvalue for="rawWeight" value="2"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player101" target="player102" id="52">
+      <edge id="52" source="player101" target="post3" weight="1.3333333333333333" label="created_post">
         <attvalues>
-          <attvalue for="2" value="90" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="created_post"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="post_time" value="1573469046"/>
         </attvalues>
+        <viz:color r="199" g="90" b="143"/>
       </edge>
-      <edge source="player101" target="player125" id="53">
+      <edge id="53" source="player101" target="post4" weight="1.3333333333333333" label="commented_at">
         <attvalues>
-          <attvalue for="2" value="95" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="post_time" value="1417725911"/>
         </attvalues>
+        <viz:color r="63" g="173" b="175"/>
       </edge>
-      <edge source="player101" target="team204" id="54">
+      <edge id="54" source="player101" target="post8" weight="1" label="commented_at">
         <attvalues>
-          <attvalue for="6" value="2018" />
-          <attvalue for="5" value="1999" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1546561806"/>
         </attvalues>
+        <viz:color r="63" g="173" b="175"/>
       </edge>
-      <edge source="player101" target="team215" id="55">
+      <edge id="55" source="player101" target="team204" weight="3" label="serve">
         <attvalues>
-          <attvalue for="6" value="2019" />
-          <attvalue for="5" value="2018" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="6"/>
+          <attvalue for="rawWeight" value="3"/>
+          <attvalue for="start_year" value="1999"/>
+          <attvalue for="end_year" value="2018"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player104" target="player100" id="56">
+      <edge id="56" source="player101" target="team215" weight="1.6666666666666665" label="serve">
         <attvalues>
-          <attvalue for="2" value="55" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="2"/>
+          <attvalue for="rawWeight" value="1.6666666666666665"/>
+          <attvalue for="start_year" value="2018"/>
+          <attvalue for="end_year" value="2019"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player104" target="player101" id="57">
+      <edge id="57" source="player125" target="player100" weight="2.6666666666666665" label="follow">
         <attvalues>
-          <attvalue for="2" value="50" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="90"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="5"/>
+          <attvalue for="rawWeight" value="2.6666666666666665"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player104" target="player105" id="58">
+      <edge id="58" source="player125" target="post7" weight="1" label="created_post">
         <attvalues>
-          <attvalue for="2" value="60" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="created_post"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1514767463"/>
         </attvalues>
+        <viz:color r="199" g="90" b="143"/>
       </edge>
-      <edge source="player104" target="team200" id="59">
+      <edge id="59" source="player125" target="post11" weight="1.6666666666666665" label="commented_at">
         <attvalues>
-          <attvalue for="6" value="2009" />
-          <attvalue for="5" value="2007" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="2"/>
+          <attvalue for="rawWeight" value="1.6666666666666665"/>
+          <attvalue for="post_time" value="1644919230"/>
         </attvalues>
+        <viz:color r="63" g="173" b="175"/>
       </edge>
-      <edge source="player104" target="team208" id="60">
+      <edge id="60" source="player125" target="team204" weight="2.333333333333333" label="serve">
         <attvalues>
-          <attvalue for="6" value="2016" />
-          <attvalue for="5" value="2015" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="4"/>
+          <attvalue for="rawWeight" value="2.333333333333333"/>
+          <attvalue for="start_year" value="2002"/>
+          <attvalue for="end_year" value="2018"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player104" target="team218" id="61">
+      <edge id="61" source="player102" target="player100" weight="2.333333333333333" label="follow">
         <attvalues>
-          <attvalue for="6" value="2010" />
-          <attvalue for="5" value="2009" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="75"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="4"/>
+          <attvalue for="rawWeight" value="2.333333333333333"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player104" target="team219" id="62">
+      <edge id="62" source="player102" target="addr_2" weight="1" label="lived_in">
         <attvalues>
-          <attvalue for="6" value="2018" />
-          <attvalue for="5" value="2018" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="lived_in"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
         </attvalues>
+        <viz:color r="137" g="112" b="199"/>
       </edge>
-      <edge source="player104" target="team221" id="63">
+      <edge id="63" source="player102" target="player101" weight="1.6666666666666665" label="follow">
         <attvalues>
-          <attvalue for="6" value="2013" />
-          <attvalue for="5" value="2012" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="75"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="2"/>
+          <attvalue for="rawWeight" value="1.6666666666666665"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player104" target="team222" id="64">
+      <edge id="64" source="player102" target="post5" weight="1" label="created_post">
         <attvalues>
-          <attvalue for="6" value="2018" />
-          <attvalue for="5" value="2017" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="created_post"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1425169806"/>
         </attvalues>
+        <viz:color r="199" g="90" b="143"/>
       </edge>
-      <edge source="player104" target="team215" id="65">
+      <edge id="65" source="player102" target="post1" weight="1.6666666666666665" label="commented_at">
         <attvalues>
-          <attvalue for="6" value="2012" />
-          <attvalue for="5" value="2010" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="2"/>
+          <attvalue for="rawWeight" value="1.6666666666666665"/>
+          <attvalue for="post_time" value="1425342606"/>
         </attvalues>
+        <viz:color r="63" g="173" b="175"/>
       </edge>
-      <edge source="player104" target="team215" id="66">
+      <edge id="66" source="player102" target="post11" weight="1.3333333333333333" label="commented_at">
         <attvalues>
-          <attvalue for="6" value="2017" />
-          <attvalue for="5" value="2016" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="1" />
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="post_time" value="1650016830"/>
         </attvalues>
+        <viz:color r="63" g="173" b="175"/>
       </edge>
-      <edge source="player104" target="team204" id="67">
+      <edge id="67" source="player102" target="post2" weight="1" label="commented_at">
         <attvalues>
-          <attvalue for="6" value="2015" />
-          <attvalue for="5" value="2013" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1480154810"/>
         </attvalues>
+        <viz:color r="63" g="173" b="175"/>
       </edge>
-      <edge source="player104" target="team204" id="68">
+      <edge id="68" source="player102" target="post7" weight="1.3333333333333333" label="commented_at">
         <attvalues>
-          <attvalue for="6" value="2019" />
-          <attvalue for="5" value="2018" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="1" />
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="post_time" value="1515026663"/>
         </attvalues>
+        <viz:color r="63" g="173" b="175"/>
       </edge>
-      <edge source="player105" target="player100" id="69">
+      <edge id="69" source="player102" target="team203" weight="1.3333333333333333" label="serve">
         <attvalues>
-          <attvalue for="2" value="70" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="start_year" value="2006"/>
+          <attvalue for="end_year" value="2015"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player105" target="player104" id="70">
+      <edge id="70" source="player102" target="team204" weight="2" label="serve">
         <attvalues>
-          <attvalue for="2" value="83" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="3"/>
+          <attvalue for="rawWeight" value="2"/>
+          <attvalue for="start_year" value="2015"/>
+          <attvalue for="end_year" value="2019"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player105" target="player116" id="71">
+      <edge id="71" source="player102" target="team204" weight="2" label="serve">
         <attvalues>
-          <attvalue for="2" value="80" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="1"/>
+          <attvalue for="simmelianStrength" value="3"/>
+          <attvalue for="rawWeight" value="2"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player105" target="team204" id="72">
+      <edge id="72" source="player104" target="player100" weight="2.6666666666666665" label="follow">
         <attvalues>
-          <attvalue for="6" value="2018" />
-          <attvalue for="5" value="2010" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="55"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="5"/>
+          <attvalue for="rawWeight" value="2.6666666666666665"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player105" target="team216" id="73">
+      <edge id="73" source="player104" target="addr_0" weight="1" label="lived_in">
         <attvalues>
-          <attvalue for="6" value="2010" />
-          <attvalue for="5" value="2009" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="lived_in"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
         </attvalues>
+        <viz:color r="137" g="112" b="199"/>
       </edge>
-      <edge source="player105" target="team218" id="74">
+      <edge id="74" source="player104" target="player101" weight="2.6666666666666665" label="follow">
         <attvalues>
-          <attvalue for="6" value="2019" />
-          <attvalue for="5" value="2018" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="50"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="5"/>
+          <attvalue for="rawWeight" value="2.6666666666666665"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player106" target="team204" id="75">
+      <edge id="75" source="player104" target="player105" weight="2.333333333333333" label="follow">
         <attvalues>
-          <attvalue for="6" value="2018" />
-          <attvalue for="5" value="2014" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="60"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="4"/>
+          <attvalue for="rawWeight" value="2.333333333333333"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player118" target="player120" id="76">
+      <edge id="76" source="player104" target="post6" weight="1" label="created_post">
         <attvalues>
-          <attvalue for="2" value="90" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="created_post"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1506036606"/>
         </attvalues>
+        <viz:color r="199" g="90" b="143"/>
       </edge>
-      <edge source="player125" target="player100" id="77">
+      <edge id="77" source="player104" target="post11" weight="1.6666666666666665" label="commented_at">
         <attvalues>
-          <attvalue for="2" value="90" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="2"/>
+          <attvalue for="rawWeight" value="1.6666666666666665"/>
+          <attvalue for="post_time" value="1642240830"/>
         </attvalues>
+        <viz:color r="63" g="173" b="175"/>
       </edge>
-      <edge source="player125" target="team204" id="78">
+      <edge id="78" source="player104" target="post4" weight="1.3333333333333333" label="commented_at">
         <attvalues>
-          <attvalue for="6" value="2018" />
-          <attvalue for="5" value="2002" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="post_time" value="1417898831"/>
         </attvalues>
+        <viz:color r="63" g="173" b="175"/>
       </edge>
-      <edge source="player102" target="player100" id="79">
+      <edge id="79" source="player104" target="team200" weight="1" label="serve">
         <attvalues>
-          <attvalue for="2" value="75" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2007"/>
+          <attvalue for="end_year" value="2009"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player102" target="player101" id="80">
+      <edge id="80" source="player104" target="team208" weight="1" label="serve">
         <attvalues>
-          <attvalue for="2" value="75" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2015"/>
+          <attvalue for="end_year" value="2016"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player102" target="team203" id="81">
+      <edge id="81" source="player104" target="team218" weight="1.3333333333333333" label="serve">
         <attvalues>
-          <attvalue for="6" value="2015" />
-          <attvalue for="5" value="2006" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="start_year" value="2009"/>
+          <attvalue for="end_year" value="2010"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player102" target="team204" id="82">
+      <edge id="82" source="player104" target="team219" weight="1" label="serve">
         <attvalues>
-          <attvalue for="6" value="2019" />
-          <attvalue for="5" value="2015" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2018"/>
+          <attvalue for="end_year" value="2018"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player102" target="team204" id="83">
+      <edge id="83" source="player104" target="team221" weight="1" label="serve">
         <attvalues>
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="1" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2012"/>
+          <attvalue for="end_year" value="2013"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player107" target="player100" id="84">
+      <edge id="84" source="player104" target="team222" weight="1" label="serve">
         <attvalues>
-          <attvalue for="2" value="80" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2017"/>
+          <attvalue for="end_year" value="2018"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player107" target="team204" id="85">
+      <edge id="85" source="player104" target="team215" weight="1.3333333333333333" label="serve">
         <attvalues>
-          <attvalue for="6" value="2015" />
-          <attvalue for="5" value="2013" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="start_year" value="2010"/>
+          <attvalue for="end_year" value="2012"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player107" target="team217" id="86">
+      <edge id="86" source="player104" target="team215" weight="1.3333333333333333" label="serve">
         <attvalues>
-          <attvalue for="6" value="2019" />
-          <attvalue for="5" value="2017" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="1"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="start_year" value="2016"/>
+          <attvalue for="end_year" value="2017"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player107" target="team224" id="87">
+      <edge id="87" source="player104" target="team204" weight="2.333333333333333" label="serve">
         <attvalues>
-          <attvalue for="6" value="2017" />
-          <attvalue for="5" value="2015" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="4"/>
+          <attvalue for="rawWeight" value="2.333333333333333"/>
+          <attvalue for="start_year" value="2013"/>
+          <attvalue for="end_year" value="2015"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player108" target="player100" id="88">
+      <edge id="88" source="player104" target="team204" weight="2.333333333333333" label="serve">
         <attvalues>
-          <attvalue for="2" value="80" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="1"/>
+          <attvalue for="simmelianStrength" value="4"/>
+          <attvalue for="rawWeight" value="2.333333333333333"/>
+          <attvalue for="start_year" value="2018"/>
+          <attvalue for="end_year" value="2019"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player108" target="player101" id="89">
+      <edge id="89" source="player105" target="player100" weight="2.333333333333333" label="follow">
         <attvalues>
-          <attvalue for="2" value="80" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="70"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="4"/>
+          <attvalue for="rawWeight" value="2.333333333333333"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player108" target="team204" id="90">
+      <edge id="90" source="player105" target="addr_5" weight="1" label="lived_in">
         <attvalues>
-          <attvalue for="6" value="2016" />
-          <attvalue for="5" value="2012" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="lived_in"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
         </attvalues>
+        <viz:color r="137" g="112" b="199"/>
       </edge>
-      <edge source="player108" target="team206" id="91">
+      <edge id="91" source="player105" target="player104" weight="2.333333333333333" label="follow">
         <attvalues>
-          <attvalue for="6" value="2017" />
-          <attvalue for="5" value="2016" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="83"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="4"/>
+          <attvalue for="rawWeight" value="2.333333333333333"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player108" target="team214" id="92">
+      <edge id="92" source="player105" target="player116" weight="1.6666666666666665" label="follow">
         <attvalues>
-          <attvalue for="6" value="2008" />
-          <attvalue for="5" value="2005" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="80"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="2"/>
+          <attvalue for="rawWeight" value="1.6666666666666665"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player108" target="team215" id="93">
+      <edge id="93" source="player105" target="post1" weight="1.3333333333333333" label="commented_at">
         <attvalues>
-          <attvalue for="6" value="2012" />
-          <attvalue for="5" value="2008" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="post_time" value="1546389006"/>
         </attvalues>
+        <viz:color r="63" g="173" b="175"/>
       </edge>
-      <edge source="player108" target="team222" id="94">
+      <edge id="94" source="player105" target="post10" weight="1" label="commented_at">
         <attvalues>
-          <attvalue for="6" value="2005" />
-          <attvalue for="5" value="2003" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1294740030"/>
         </attvalues>
+        <viz:color r="63" g="173" b="175"/>
       </edge>
-      <edge source="player109" target="player100" id="95">
+      <edge id="95" source="player105" target="post5" weight="1" label="commented_at">
         <attvalues>
-          <attvalue for="2" value="80" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1425515526"/>
         </attvalues>
+        <viz:color r="63" g="173" b="175"/>
       </edge>
-      <edge source="player109" target="player125" id="96">
+      <edge id="96" source="player105" target="team204" weight="2" label="serve">
         <attvalues>
-          <attvalue for="2" value="90" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="3"/>
+          <attvalue for="rawWeight" value="2"/>
+          <attvalue for="start_year" value="2010"/>
+          <attvalue for="end_year" value="2018"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player109" target="team204" id="97">
+      <edge id="97" source="player105" target="team216" weight="1.3333333333333333" label="serve">
         <attvalues>
-          <attvalue for="6" value="2015" />
-          <attvalue for="5" value="2010" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="start_year" value="2009"/>
+          <attvalue for="end_year" value="2010"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player109" target="team219" id="98">
+      <edge id="98" source="player105" target="team218" weight="1.3333333333333333" label="serve">
         <attvalues>
-          <attvalue for="6" value="2017" />
-          <attvalue for="5" value="2017" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="start_year" value="2018"/>
+          <attvalue for="end_year" value="2019"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player109" target="team222" id="99">
+      <edge id="99" source="player107" target="player100" weight="1.3333333333333333" label="follow">
         <attvalues>
-          <attvalue for="6" value="2017" />
-          <attvalue for="5" value="2015" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="80"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player144" target="player100" id="100">
+      <edge id="100" source="player107" target="addr_1" weight="1" label="lived_in">
         <attvalues>
-          <attvalue for="2" value="80" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="lived_in"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
         </attvalues>
+        <viz:color r="137" g="112" b="199"/>
       </edge>
-      <edge source="player144" target="player145" id="101">
+      <edge id="101" source="player107" target="post7" weight="1" label="commented_at">
         <attvalues>
-          <attvalue for="2" value="100" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1515199583"/>
         </attvalues>
+        <viz:color r="63" g="173" b="175"/>
       </edge>
-      <edge source="player144" target="team210" id="102">
+      <edge id="102" source="player107" target="team204" weight="1.3333333333333333" label="serve">
         <attvalues>
-          <attvalue for="6" value="2004" />
-          <attvalue for="5" value="1996" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="start_year" value="2013"/>
+          <attvalue for="end_year" value="2015"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player144" target="team214" id="103">
+      <edge id="103" source="player107" target="team217" weight="1" label="serve">
         <attvalues>
-          <attvalue for="6" value="2009" />
-          <attvalue for="5" value="2008" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2017"/>
+          <attvalue for="end_year" value="2019"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player144" target="team216" id="104">
+      <edge id="104" source="player107" target="team224" weight="1" label="serve">
         <attvalues>
-          <attvalue for="6" value="2010" />
-          <attvalue for="5" value="2009" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2015"/>
+          <attvalue for="end_year" value="2017"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player144" target="team217" id="105">
+      <edge id="105" source="player108" target="player100" weight="2" label="follow">
         <attvalues>
-          <attvalue for="6" value="2011" />
-          <attvalue for="5" value="2010" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="80"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="3"/>
+          <attvalue for="rawWeight" value="2"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player144" target="team226" id="106">
+      <edge id="106" source="player108" target="addr_8" weight="1" label="lived_in">
         <attvalues>
-          <attvalue for="6" value="1996" />
-          <attvalue for="5" value="1992" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="lived_in"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
         </attvalues>
+        <viz:color r="137" g="112" b="199"/>
       </edge>
-      <edge source="player144" target="team229" id="107">
+      <edge id="107" source="player108" target="player101" weight="2" label="follow">
         <attvalues>
-          <attvalue for="6" value="2008" />
-          <attvalue for="5" value="2004" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="80"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="3"/>
+          <attvalue for="rawWeight" value="2"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player103" target="team204" id="108">
+      <edge id="108" source="player108" target="post10" weight="1" label="created_post">
         <attvalues>
-          <attvalue for="6" value="2019" />
-          <attvalue for="5" value="2017" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="created_post"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1293876030"/>
         </attvalues>
+        <viz:color r="199" g="90" b="143"/>
       </edge>
-      <edge source="player103" target="player102" id="109">
+      <edge id="109" source="player108" target="post11" weight="1.3333333333333333" label="commented_at">
         <attvalues>
-          <attvalue for="2" value="70" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="post_time" value="1652608830"/>
         </attvalues>
+        <viz:color r="63" g="173" b="175"/>
       </edge>
-      <edge source="player103" target="team208" id="110">
+      <edge id="110" source="player108" target="team204" weight="1.6666666666666665" label="serve">
         <attvalues>
-          <attvalue for="6" value="2017" />
-          <attvalue for="5" value="2013" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="2"/>
+          <attvalue for="rawWeight" value="1.6666666666666665"/>
+          <attvalue for="start_year" value="2012"/>
+          <attvalue for="end_year" value="2016"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player103" target="team218" id="111">
+      <edge id="111" source="player108" target="team206" weight="1" label="serve">
         <attvalues>
-          <attvalue for="6" value="2013" />
-          <attvalue for="5" value="2013" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2016"/>
+          <attvalue for="end_year" value="2017"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player110" target="team204" id="112">
+      <edge id="112" source="player108" target="team214" weight="1" label="serve">
         <attvalues>
-          <attvalue for="6" value="2015" />
-          <attvalue for="5" value="2011" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2005"/>
+          <attvalue for="end_year" value="2008"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player110" target="team218" id="113">
+      <edge id="113" source="player108" target="team215" weight="1.3333333333333333" label="serve">
         <attvalues>
-          <attvalue for="6" value="2017" />
-          <attvalue for="5" value="2015" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="start_year" value="2008"/>
+          <attvalue for="end_year" value="2012"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player111" target="team204" id="114">
+      <edge id="114" source="player108" target="team222" weight="1" label="serve">
         <attvalues>
-          <attvalue for="6" value="2016" />
-          <attvalue for="5" value="2015" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2003"/>
+          <attvalue for="end_year" value="2005"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player111" target="team200" id="115">
+      <edge id="115" source="player109" target="player100" weight="2" label="follow">
         <attvalues>
-          <attvalue for="6" value="2018" />
-          <attvalue for="5" value="2016" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="80"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="3"/>
+          <attvalue for="rawWeight" value="2"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player111" target="team215" id="116">
+      <edge id="116" source="player109" target="addr_9" weight="1" label="lived_in">
         <attvalues>
-          <attvalue for="6" value="2011" />
-          <attvalue for="5" value="2003" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="lived_in"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
         </attvalues>
+        <viz:color r="137" g="112" b="199"/>
       </edge>
-      <edge source="player112" target="team204" id="117">
+      <edge id="117" source="player109" target="player125" weight="1.6666666666666665" label="follow">
         <attvalues>
-          <attvalue for="6" value="2017" />
-          <attvalue for="5" value="2015" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="90"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="2"/>
+          <attvalue for="rawWeight" value="1.6666666666666665"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player112" target="team219" id="118">
+      <edge id="118" source="player109" target="post1" weight="1.3333333333333333" label="commented_at">
         <attvalues>
-          <attvalue for="6" value="2019" />
-          <attvalue for="5" value="2019" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="post_time" value="1479981890"/>
         </attvalues>
+        <viz:color r="63" g="173" b="175"/>
       </edge>
-      <edge source="player112" target="team226" id="119">
+      <edge id="119" source="player109" target="team204" weight="1.6666666666666665" label="serve">
         <attvalues>
-          <attvalue for="6" value="2019" />
-          <attvalue for="5" value="2017" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="2"/>
+          <attvalue for="rawWeight" value="1.6666666666666665"/>
+          <attvalue for="start_year" value="2010"/>
+          <attvalue for="end_year" value="2015"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player114" target="team204" id="120">
+      <edge id="120" source="player109" target="team219" weight="1" label="serve">
         <attvalues>
-          <attvalue for="6" value="2013" />
-          <attvalue for="5" value="2013" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2017"/>
+          <attvalue for="end_year" value="2017"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player114" target="player103" id="121">
+      <edge id="121" source="player109" target="team222" weight="1" label="serve">
         <attvalues>
-          <attvalue for="2" value="90" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2015"/>
+          <attvalue for="end_year" value="2017"/>
         </attvalues>
+        <viz:color r="105" g="168" b="80"/>
       </edge>
-      <edge source="player114" target="team218" id="122">
+      <edge id="122" source="player113" target="player100" weight="3" label="follow">
         <attvalues>
-          <attvalue for="6" value="2000" />
-          <attvalue for="5" value="1997" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="99"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="6"/>
+          <attvalue for="rawWeight" value="3"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player114" target="team226" id="123">
+      <edge id="123" source="player113" target="addr_13" weight="1" label="lived_in">
         <attvalues>
-          <attvalue for="6" value="2004" />
-          <attvalue for="5" value="2000" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="lived_in"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
         </attvalues>
+        <viz:color r="137" g="112" b="199"/>
       </edge>
-      <edge source="player138" target="team204" id="124">
+      <edge id="124" source="player113" target="player101" weight="2.6666666666666665" label="follow">
         <attvalues>
-          <attvalue for="6" value="2019" />
-          <attvalue for="5" value="2016" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="99"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="5"/>
+          <attvalue for="rawWeight" value="2.6666666666666665"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player138" target="team210" id="125">
+      <edge id="125" source="player113" target="player104" weight="2.6666666666666665" label="follow">
         <attvalues>
-          <attvalue for="6" value="2014" />
-          <attvalue for="5" value="2008" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="99"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="5"/>
+          <attvalue for="rawWeight" value="2.6666666666666665"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player138" target="team221" id="126">
+      <edge id="126" source="player113" target="player105" weight="2.333333333333333" label="follow">
         <attvalues>
-          <attvalue for="6" value="2016" />
-          <attvalue for="5" value="2014" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="99"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="4"/>
+          <attvalue for="rawWeight" value="2.333333333333333"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player135" target="player102" id="127">
+      <edge id="127" source="player113" target="player106" weight="1.3333333333333333" label="follow">
         <attvalues>
-          <attvalue for="2" value="80" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="99"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player135" target="team203" id="128">
+      <edge id="128" source="player113" target="player116" weight="1.6666666666666665" label="follow">
         <attvalues>
-          <attvalue for="6" value="2019" />
-          <attvalue for="5" value="2012" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="99"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="2"/>
+          <attvalue for="rawWeight" value="1.6666666666666665"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player119" target="team200" id="129">
+      <edge id="129" source="player113" target="player118" weight="1.3333333333333333" label="follow">
         <attvalues>
-          <attvalue for="6" value="2019" />
-          <attvalue for="5" value="2016" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="99"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player120" target="player118" id="130">
+      <edge id="130" source="player113" target="player119" weight="1" label="follow">
         <attvalues>
-          <attvalue for="2" value="80" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="99"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player145" target="team200" id="131">
+      <edge id="131" source="player113" target="player120" weight="1.3333333333333333" label="follow">
         <attvalues>
-          <attvalue for="6" value="2018" />
-          <attvalue for="5" value="2016" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="99"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player145" target="team210" id="132">
+      <edge id="132" source="player113" target="player121" weight="1.3333333333333333" label="follow">
         <attvalues>
-          <attvalue for="6" value="2019" />
-          <attvalue for="5" value="2018" />
-          <attvalue for="3" value="serve" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="99"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player133" target="player144" id="133">
+      <edge id="133" source="player113" target="player125" weight="2.333333333333333" label="follow">
         <attvalues>
-          <attvalue for="2" value="90" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="degree" value="99"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="4"/>
+          <attvalue for="rawWeight" value="2.333333333333333"/>
         </attvalues>
+        <viz:color r="201" g="90" b="66"/>
       </edge>
-      <edge source="player133" target="player114" id="134">
+      <edge id="134" source="player113" target="post11" weight="2" label="commented_at">
         <attvalues>
-          <attvalue for="2" value="90" />
-          <attvalue for="3" value="follow" />
-          <attvalue for="4" value="0" />
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="3"/>
+          <attvalue for="rawWeight" value="2"/>
+          <attvalue for="post_time" value="1647338430"/>
         </attvalues>
+        <viz:color r="63" g="173" b="175"/>
+      </edge>
+      <edge id="135" source="player113" target="post3" weight="1.3333333333333333" label="commented_at">
+        <attvalues>
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="post_time" value="1573641846"/>
+        </attvalues>
+        <viz:color r="63" g="173" b="175"/>
+      </edge>
+      <edge id="136" source="player113" target="team204" weight="3" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="6"/>
+          <attvalue for="rawWeight" value="3"/>
+          <attvalue for="start_year" value="2016"/>
+          <attvalue for="end_year" value="2019"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="137" source="player144" target="player100" weight="1" label="follow">
+        <attvalues>
+          <attvalue for="degree" value="80"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+        </attvalues>
+        <viz:color r="201" g="90" b="66"/>
+      </edge>
+      <edge id="138" source="player144" target="player145" weight="1.3333333333333333" label="follow">
+        <attvalues>
+          <attvalue for="degree" value="100"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+        </attvalues>
+        <viz:color r="201" g="90" b="66"/>
+      </edge>
+      <edge id="139" source="player144" target="post4" weight="1.3333333333333333" label="commented_at">
+        <attvalues>
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="post_time" value="1417812311"/>
+        </attvalues>
+        <viz:color r="63" g="173" b="175"/>
+      </edge>
+      <edge id="140" source="player144" target="team210" weight="1.3333333333333333" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="start_year" value="1996"/>
+          <attvalue for="end_year" value="2004"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="141" source="player144" target="team214" weight="1" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2008"/>
+          <attvalue for="end_year" value="2009"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="142" source="player144" target="team216" weight="1" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2009"/>
+          <attvalue for="end_year" value="2010"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="143" source="player144" target="team217" weight="1" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2010"/>
+          <attvalue for="end_year" value="2011"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="144" source="player144" target="team226" weight="1" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="1992"/>
+          <attvalue for="end_year" value="1996"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="145" source="player144" target="team229" weight="1" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2004"/>
+          <attvalue for="end_year" value="2008"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="146" source="player103" target="post1" weight="1.3333333333333333" label="commented_at">
+        <attvalues>
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="post_time" value="1506209406"/>
+        </attvalues>
+        <viz:color r="63" g="173" b="175"/>
+      </edge>
+      <edge id="147" source="player103" target="team204" weight="1.6666666666666665" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="2"/>
+          <attvalue for="rawWeight" value="1.6666666666666665"/>
+          <attvalue for="start_year" value="2017"/>
+          <attvalue for="end_year" value="2019"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="148" source="player103" target="player102" weight="1.6666666666666665" label="follow">
+        <attvalues>
+          <attvalue for="degree" value="70"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="2"/>
+          <attvalue for="rawWeight" value="1.6666666666666665"/>
+        </attvalues>
+        <viz:color r="201" g="90" b="66"/>
+      </edge>
+      <edge id="149" source="player103" target="post4" weight="1" label="created_post">
+        <attvalues>
+          <attvalue for="edge_type" value="created_post"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1417466711"/>
+        </attvalues>
+        <viz:color r="199" g="90" b="143"/>
+      </edge>
+      <edge id="150" source="player103" target="post3" weight="1" label="commented_at">
+        <attvalues>
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1573814706"/>
+        </attvalues>
+        <viz:color r="63" g="173" b="175"/>
+      </edge>
+      <edge id="151" source="player103" target="team208" weight="1" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2013"/>
+          <attvalue for="end_year" value="2017"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="152" source="player103" target="team218" weight="1.3333333333333333" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="start_year" value="2013"/>
+          <attvalue for="end_year" value="2013"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="153" source="player111" target="post1" weight="1" label="commented_at">
+        <attvalues>
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1546734606"/>
+        </attvalues>
+        <viz:color r="63" g="173" b="175"/>
+      </edge>
+      <edge id="154" source="player111" target="team204" weight="1" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2015"/>
+          <attvalue for="end_year" value="2016"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="155" source="player111" target="post2" weight="1" label="created_post">
+        <attvalues>
+          <attvalue for="edge_type" value="created_post"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1479895490"/>
+        </attvalues>
+        <viz:color r="199" g="90" b="143"/>
+      </edge>
+      <edge id="156" source="player111" target="team200" weight="1" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2016"/>
+          <attvalue for="end_year" value="2018"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="157" source="player111" target="team215" weight="1" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2003"/>
+          <attvalue for="end_year" value="2011"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="158" source="player130" target="post1" weight="1" label="commented_at">
+        <attvalues>
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1546389006"/>
+        </attvalues>
+        <viz:color r="63" g="173" b="175"/>
+      </edge>
+      <edge id="159" source="player130" target="team219" weight="1" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2014"/>
+          <attvalue for="end_year" value="2019"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="160" source="player116" target="player141" weight="1.3333333333333333" label="follow">
+        <attvalues>
+          <attvalue for="degree" value="100"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+        </attvalues>
+        <viz:color r="201" g="90" b="66"/>
+      </edge>
+      <edge id="161" source="player116" target="team210" weight="1" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2018"/>
+          <attvalue for="end_year" value="2019"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="162" source="player116" target="team229" weight="1.3333333333333333" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="start_year" value="2010"/>
+          <attvalue for="end_year" value="2014"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="163" source="player116" target="team216" weight="1.3333333333333333" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="start_year" value="2003"/>
+          <attvalue for="end_year" value="2010"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="164" source="player116" target="team216" weight="1.3333333333333333" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="1"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="start_year" value="2014"/>
+          <attvalue for="end_year" value="2018"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="165" source="player106" target="team204" weight="1.3333333333333333" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="start_year" value="2014"/>
+          <attvalue for="end_year" value="2018"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="166" source="player106" target="post8" weight="1" label="created_post">
+        <attvalues>
+          <attvalue for="edge_type" value="created_post"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1546302606"/>
+        </attvalues>
+        <viz:color r="199" g="90" b="143"/>
+      </edge>
+      <edge id="167" source="player106" target="post6" weight="1" label="commented_at">
+        <attvalues>
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1506382266"/>
+        </attvalues>
+        <viz:color r="63" g="173" b="175"/>
+      </edge>
+      <edge id="168" source="player118" target="player120" weight="1.3333333333333333" label="follow">
+        <attvalues>
+          <attvalue for="degree" value="90"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+        </attvalues>
+        <viz:color r="201" g="90" b="66"/>
+      </edge>
+      <edge id="169" source="player118" target="post8" weight="1" label="commented_at">
+        <attvalues>
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1546734906"/>
+        </attvalues>
+        <viz:color r="63" g="173" b="175"/>
+      </edge>
+      <edge id="170" source="player119" target="team200" weight="1" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2016"/>
+          <attvalue for="end_year" value="2019"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="171" source="player120" target="player118" weight="1.3333333333333333" label="follow">
+        <attvalues>
+          <attvalue for="degree" value="80"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+        </attvalues>
+        <viz:color r="201" g="90" b="66"/>
+      </edge>
+      <edge id="172" source="player121" target="player116" weight="1.3333333333333333" label="follow">
+        <attvalues>
+          <attvalue for="degree" value="90"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+        </attvalues>
+        <viz:color r="201" g="90" b="66"/>
+      </edge>
+      <edge id="173" source="player121" target="team215" weight="1" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2005"/>
+          <attvalue for="end_year" value="2011"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="174" source="player110" target="team204" weight="1" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2011"/>
+          <attvalue for="end_year" value="2015"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="175" source="player110" target="post10" weight="1" label="commented_at">
+        <attvalues>
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1295085630"/>
+        </attvalues>
+        <viz:color r="63" g="173" b="175"/>
+      </edge>
+      <edge id="176" source="player110" target="team218" weight="1" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2015"/>
+          <attvalue for="end_year" value="2017"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="177" source="player112" target="team204" weight="1" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2015"/>
+          <attvalue for="end_year" value="2017"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="178" source="player112" target="team219" weight="1" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2019"/>
+          <attvalue for="end_year" value="2019"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="179" source="player112" target="team226" weight="1" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2017"/>
+          <attvalue for="end_year" value="2019"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="180" source="addr_7" target="LA" weight="1" label="belong_to">
+        <attvalues>
+          <attvalue for="edge_type" value="belong_to"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+        </attvalues>
+        <viz:color r="182" g="148" b="66"/>
+      </edge>
+      <edge id="181" source="player135" target="player102" weight="1.6666666666666665" label="follow">
+        <attvalues>
+          <attvalue for="degree" value="80"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="2"/>
+          <attvalue for="rawWeight" value="1.6666666666666665"/>
+        </attvalues>
+        <viz:color r="201" g="90" b="66"/>
+      </edge>
+      <edge id="182" source="player135" target="post7" weight="1.3333333333333333" label="commented_at">
+        <attvalues>
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="post_time" value="1515026663"/>
+        </attvalues>
+        <viz:color r="63" g="173" b="175"/>
+      </edge>
+      <edge id="183" source="player135" target="team203" weight="1.3333333333333333" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="start_year" value="2012"/>
+          <attvalue for="end_year" value="2019"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="184" source="player145" target="post5" weight="1" label="commented_at">
+        <attvalues>
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="post_time" value="1425429006"/>
+        </attvalues>
+        <viz:color r="63" g="173" b="175"/>
+      </edge>
+      <edge id="185" source="player145" target="team200" weight="1" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+          <attvalue for="start_year" value="2016"/>
+          <attvalue for="end_year" value="2018"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="186" source="player145" target="team210" weight="1.3333333333333333" label="serve">
+        <attvalues>
+          <attvalue for="edge_type" value="serve"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="start_year" value="2018"/>
+          <attvalue for="end_year" value="2019"/>
+        </attvalues>
+        <viz:color r="105" g="168" b="80"/>
+      </edge>
+      <edge id="187" source="player133" target="player144" weight="1.3333333333333333" label="follow">
+        <attvalues>
+          <attvalue for="degree" value="90"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+        </attvalues>
+        <viz:color r="201" g="90" b="66"/>
+      </edge>
+      <edge id="188" source="player133" target="player114" weight="1" label="follow">
+        <attvalues>
+          <attvalue for="degree" value="90"/>
+          <attvalue for="edge_type" value="follow"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="0"/>
+          <attvalue for="rawWeight" value="1"/>
+        </attvalues>
+        <viz:color r="201" g="90" b="66"/>
+      </edge>
+      <edge id="189" source="player133" target="post4" weight="1.3333333333333333" label="commented_at">
+        <attvalues>
+          <attvalue for="edge_type" value="commented_at"/>
+          <attvalue for="networkx_key" value="0"/>
+          <attvalue for="simmelianStrength" value="1"/>
+          <attvalue for="rawWeight" value="1.3333333333333333"/>
+          <attvalue for="post_time" value="1417725911"/>
+        </attvalues>
+        <viz:color r="63" g="173" b="175"/>
       </edge>
     </edges>
   </graph>

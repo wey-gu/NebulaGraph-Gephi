@@ -11,14 +11,59 @@ Features:
 - Query NebulaGraph
 - Render results
 - Export result to a [gexf file](https://raw.githubusercontent.com/wey-gu/NebulaGraph-Gephi/main/example/nebulagraph_export.gexf) for Gephi
-- Download [HTML file](https://raw.githubusercontent.com/wey-gu/NebulaGraph-Gephi/main/example/nebulagraph_export.html) for any renderable graph
+- Download the [HTML file](https://raw.githubusercontent.com/wey-gu/NebulaGraph-Gephi/main/example/nebulagraph_export.html) for any renderable graph
 - Download [CSV results](https://raw.githubusercontent.com/wey-gu/NebulaGraph-Gephi/main/example/nebulagraph_export.csv) for any query(or Multiple Queries)
 - Graph Algorithm and Visualization with [Gephi-Lite](https://github.com/gephi/gephi-lite/)
 
-![multi_query_screencapture](https://github.com/wey-gu/NebulaGraph-Gephi/assets/1651790/00524169-70ee-469b-9408-92fd58840b37)
+### 💻 How to use
+
+> Render Multiple Queries, and export `GEXF`, `HTML,` or `CSV` files.
+
+<p align="center">
+  <a href="https://www.siwei.io/demo-dumps/adhoc-graphs/nebulagraph_export_supply_chain.html">
+    <img width="650" alt="graph_supply_chain" src="https://github.com/wey-gu/NebulaGraph-Gephi/assets/1651790/00524169-70ee-469b-9408-92fd58840b37">
+  </a>
+  <br>
+  <small>
+    <i>Connect to NebulaGraph, then make queries, multiple queries will be merged in one Graph, we could download single </i>
+    <a href="https://raw.githubusercontent.com/wey-gu/NebulaGraph-Gephi/main/example/nebulagraph_export.html">
+      .html
+    </a>
+    <i>files to embed in your blog, or webpage. Rendered like </i>
+    <a href="https://www.siwei.io/demo-dumps/adhoc-graphs/nebulagraph_export_supply_chain.html">
+      this
+    </a>.
+  </small>
+</p>
+
+> Embed the rendered graph in your blog:
+
+```html
+<iframe
+   src="https://www.siwei.io/demo-dumps/adhoc-graphs/nebulagraph_export_supply_chain.html"
+   width="100%"
+   height="500px"
+></iframe>
+```
+
+> Load into Gephi-Lite!
+
+<p align="center">
+  <a href="https://www.siwei.io/demo-dumps/adhoc-graphs/nebulagraph_export_supply_chain.html">
+    <img width="650" alt="graph_supply_chain" src="https://github.com/wey-gu/NebulaGraph-Gephi/assets/1651790/63894390-824c-4b98-bb1d-769c88ef23a9">
+  </a>
+  <br>
+  <small>
+    <i>Gephi-Lite Graph, imported from </i>
+    <a href="https://raw.githubusercontent.com/wey-gu/NebulaGraph-Gephi/main/example/nebulagraph_export.gexf">
+      .gexf file
+    </a>
+     <i> exported from the query.</i>
+  </small>
+</p>
 
 
-## 🚀 How to
+## 🚀 How to Install
 
 > Installation
 
@@ -42,6 +87,8 @@ docker-compose up -d
 > Or, if you are using the NebulaGraph Docker extension, it's already been included since 0.4.12
 
 Go to [here](https://hub.docker.com/extensions/weygu/nebulagraph-dd-ext) and one click to try it!
+
+
 
 ## ♥️ Thanks to
 
