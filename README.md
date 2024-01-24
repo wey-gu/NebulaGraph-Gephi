@@ -2,6 +2,8 @@
 
 [![for NebulaGraph](https://img.shields.io/badge/Toolchain-NebulaGraph-blue)](https://github.com/vesoft-inc/nebula) [![Gephi](https://img.shields.io/badge/Gephi-Supported-brightgreen)](https://github.com/gephi/gephi-lite/) [![Docker Image](https://img.shields.io/docker/v/weygu/nebulagraph-gephi-exchange?label=Image&logo=docker)](https://hub.docker.com/r/weygu/nebulagraph-gephi-exchange) [![Docker Extension](https://img.shields.io/badge/Docker-Extension-blue?logo=docker)](https://hub.docker.com/extensions/weygu/nebulagraph-dd-ext) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/wey-gu/NebulaGraph-Gephi?label=Version)](https://github.com/wey-gu/NebulaGraph-Gephi/releases) [![Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg?)](https://nebulagraph-gephi.streamlit.app/) 
 
+[![Docker Image CI](https://github.com/wey-gu/NebulaGraph-Gephi/actions/workflows/docker-image.yml/badge.svg)](https://github.com/wey-gu/NebulaGraph-Gephi/actions/workflows/docker-image.yml)
+
 Gephi is an Awesome Graph Algo and Vis tool! If you would like to visualize your data on NebulaGraph with it, this is the way to go.
 
 https://github.com/siwei-io/talks/assets/1651790/c036a229-c71e-4344-93d4-720657f2ba90
