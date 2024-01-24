@@ -1,4 +1,4 @@
-nebula3-python==3.4.0
+nebula3-python==3.5.0
 streamlit==1.26.0
 pyvis==0.3.2
 #ng_nx==0.1.9
